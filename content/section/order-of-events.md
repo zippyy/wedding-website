@@ -3,31 +3,31 @@ draft: false
 title: "Order of Events"
 ---
 
-## 1:30pm - Arrivals
+<!-- ## 1:30pm - Arrivals
 
 Everyone arrives at Higher Eggbeer
 
-Warm drink on arrival before the ceremony
+Warm drink on arrival before the ceremony -->
 
-## 2pm - Ceremony
+## 6pm - Ceremony
 
-Inside the **Chapel Barn** at Higher Eggbeer
+At the church
 
-## 2:30pm - Reception
+filler here
 
-Sparkling, canapes and photographs on the lawn after the ceremony- weather permitting!
+## 8pm - Reception
 
-Please do wrap up warm, but we have contingencies for rain
+At the Royal Palm
 
-## 4pm - Wedding Breakfast
+filler here
 
-A dinner with wine will follow in Higher Eggbeer's **Banquet Barn**
+## 11:30pm - After Party @ Boomtown
 
-Speeches after dinner
+Party at hotel
 
-_Venue Bar opens during the wedding breakfast -  cash & card accepted_
+filler here
 
-## Later... The Party
+<!-- ## Later... The Party
 
 After a quick reshuffle of the **Banquet Barn**, the party will begin!
 
@@ -45,4 +45,4 @@ _Venue Bar closes shortly after midnight_
 
 The **Banquet Barn** will shut at around midnight… but the party doesn’t need to end there!
 
-The smaller **‘Pub’ Barn** will be opened with a few bottles and maybe some kegs, for those hardcore enough to stay up!
+The smaller **‘Pub’ Barn** will be opened with a few bottles and maybe some kegs, for those hardcore enough to stay up! -->
