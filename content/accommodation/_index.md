@@ -1,121 +1,220 @@
 ---
 draft: false
-title: "Accommodation"
+title: "RSVP"
 ---
 
-## Camping and Caravans at Higher Eggbeer
+<section class="formcarry-container">
+  <form action="https://formcarry.com/s/BdeN7yS8K_Y" method="POST" enctype="multipart/form-data">
+    
+    <div class="formcarry-block">
+      <label for="fc-generated-1-name">Full Name</label>
+      <input type="text" name="name" id="fc-generated-1-name" placeholder="Your first and last name" />
+    </div>
+    
+    <div class="formcarry-block">
+      <label for="fc-generated-1-email">Your Email Address</label>
+      <input type="email" name="email" id="fc-generated-1-email" placeholder="john@doe.com" />
+    </div>
+    
+    <div class="formcarry-block">
+      <label for="fc-generated-1-telephone">Your Phone Number</label>
+      <input type="tel" name="telephone" id="fc-generated-1-telephone" placeholder="### ### ####" />
+    </div>
+    
+    <div class="formcarry-block">
+      <label for="fc-generated-1-people">Number of people attending:</label>
+      <select name="people" id="fc-generated-1-people">
+        <option value="" selected disabled>Please select..</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    
+    <div class="formcarry-block">  
+      <button type="submit">Send</button>
+    </div>
+  
+  </form>
+</section>
 
-Higher Eggbeer also offers additional accommodation on site via shepards huts and caravans, which **need to be booked and paid in advance via Hugo and Sarah**. You would be able to stay there until midday Monday.
+<style>
+  
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
-<br>
+    .formcarry-container {
+      box-sizing: border-box;
+      margin: 40px auto 0 auto;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.01em;
 
-Quoted from - [Higher Eggbeer's website](http://www.higher-eggbeer.co.uk/accommodation/#:~:text=You%20can%20bring,Friday%20to%20Monday.%C2%A0):
+      width: 400px;
 
-<br>
+      /* NORMAL */
+      --fc-border-color: #ECEFF9;
+      --fc-normal-text-color: #0E0B3D;
+      --fc-normal-placeholder-color: #B3B8D0;
 
-_"There is a **shepherds hut** in the camping field with a shower and toilet, it has electric for hairdryers and charging phones. It also has a mirror and gas hob._
+      /* PRIMARY COLOR | HSL FORMAT*/
+      --fc-primary-color-hue: 123;
+      --fc-error-color-hue: 356;
+      --fc-primary-hsl: var(--fc-primary-color-hue), 65%, 51%;
+      --fc-error-hsl: var(--fc-error-color-hue), 100%, 54%;
 
-<br>
+      /* HOVER */
+      --fc-field-hover-bg-color: #F7F9FC;
+      --fc-border-hover-color: #DDE0EE;
+      --fc-field-hover-text-color: #B3B8D0;
 
-_There is also a **bridal shepherds hut** with a double bed, linen and heating provided which is £100 per night._
+      --fc-border-active-color: #1463FF;
+    }
 
-<br>
+    .formcarry-container * {
+      box-sizing: border-box;
+    }
 
-_Also **we can provide up to 7 caravans (depending on avaliablility)** on site for the weekend. Last two weeks of july and August not included. The caravans have gas shower, cooking, fridge and heating, we have 6 hook ups which cost £15 each. Please bring your own bedding. Please call Sarah (editor's note: not the bride!) on 07933028347 for prices and avaliability._
+    .formcarry-container label {
+      display: block;
+      cursor: pointer;
+    }
 
-<br>
+    .formcarry-container .formcarry-block:not(:first-child) {
+      margin-top: 16px;
+    }
 
-_There is a **mobile home** on site which sleeps 6-8 guests, it has three bedrooms, one double and two twins (which can be doubles as well). There is a pullout double bed in the living room. There is also a separate shower and toilet and kitchenette. Bedding not provided. The Cost is £250 for the weekend, Friday to Monday."_
+    /*=============================================
+    =            Fields           =
+    =============================================*/
+    
+    .formcarry-container input,
+    .formcarry-container textarea,
+    .formcarry-container select {
+      margin-top: 4px;
+      width: 100%;
+      height: 42px;
+      border: 1px solid var(--fc-border-color);
+      color: var(--fc-normal-text-color);
+      border-radius: 6px;
+      padding: 8px 12px;
+      
+      font-family: "Inter", sans-serif;
+      font-size:14px;
+      transition: 125ms background, 125ms color, 125ms box-shadow;
+    }
 
-## B&B’s
+    .formcarry-container textarea{
+      min-height: 188px;
+      max-width: 100%;
+      padding-top: 12px;
+    }
 
-- [Brook Farmhouse](https://www.brook-farmhouse.co.uk/)
-B&B with 3 Rooms (10 min drive)
+    .formcarry-container input::placeholder,
+    .formcarry-container textarea::placeholder,
+    .formcarry-container select::placeholder {
+      color: var(--fc-normal-placeholder-color);
+    }
 
-- [Brickmoor Apartment B&B](http://www.brickmoor-bedandbreakfast.co.uk/page2.html)
-Sleeps 2 (12 min drive)
+    .formcarry-container input:hover,
+    .formcarry-container textarea:hover,
+    .formcarry-container select:hover {
+      border-color: var(--fc-border-hover-color);
+      background-color: var(--fc-field-hover-bg-color);
+    }
 
+    .formcarry-container input:hover::placeholder,
+    .formcarry-container textarea:hover::placeholder,
+    .formcarry-container select:hover::placeholder {
+      color: var(--fc-field-hover-text-color);
+    }
 
-## Hotels
+    .formcarry-container input:focus,
+    .formcarry-container textarea:focus,
+    .formcarry-container select:focus {
+      background-color: #fff;
+      border-color: hsl(var(--fc-primary-hsl));
+      box-shadow: hsla(var(--fc-primary-hsl), 8%) 0px 0px 0px 3px;
+      outline: none;
+    }
 
-- [Holiday Inn, Exeter](https://www.booking.com/hotel/gb/holiday-inn-express-exeter-city-centre.en-gb.html)
+    .formcarry-container select {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9997 14.5001L8.46387 10.9642L9.64303 9.78589L11.9997 12.1434L14.3564 9.78589L15.5355 10.9642L11.9997 14.5001Z' fill='%236C6F93'/%3E%3C/svg%3E%0A");
+      /* background-position: calc(100% - 20px) calc(1em + 4px), calc(100% - 15px) calc(1em + 4px); */
+      background-size: 24px 24px;
+      background-position: 98%;
+      background-repeat: no-repeat;
+      appearance: none;
+      -webkit-appearance: none;
+    }
 
-- [Fingle Glen Golf Hotel](https://www.fingleglengolfhotel.co.uk/)
-    - Hotel Rooms & Lodges (8min drive)
+    .formcarry-container button {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      height: 42px;
+      line-height: 40px;
+      width: 100%;
+      border-radius: 6px;
+      box-sizing: border-box;
+      border: 1px solid hsla(var(--fc-primary-hsl));
+      background-color: hsla(var(--fc-primary-hsl));
+      color: #fff;
+      cursor: pointer;
+    }
 
-- [Mill End Hotel](https://www.booking.com/hotel/gb/mill-end.en-gb.html)
-    - Small Boutique Hotel (15min drive)
+    .formcarry-container button {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      height: 40px;
+      line-height: 24px;
+      width: 100%;
+      border: 0;
+      border-radius: 6px;
+      box-sizing: border-box;
+      background-color: hsla(var(--fc-primary-hsl));
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 0 0 transparent;
+      
+      transition: 125ms all;
+    }
+    
+    .formcarry-container button:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), hsla(var(--fc-primary-hsl));
+    }
+    
+    .formcarry-container button:focus {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), hsla(var(--fc-primary-hsl));
+      border-inline: 1px solid inline rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 0px 0px 3px rgba(var(--fc-primary-hsl), 12%);
+    }
 
-- [Jury’s Inn, Exeter](https://www.booking.com/hotel/gb/jurys-inn-exeter.en-gb.html)
-    - Hotel in Exeter - close to the train station
+    .formcarry-container button:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), hsla(var(--fc-primary-hsl));
+    }
 
-- [The Globe Inn, Chagford](https://www.booking.com/hotel/gb/the-globe-inn.en-gb.html)
-    - Pub with Rooms (15-20min drive)
+    .formcarry-container button:disabled {
+      background-color: hsla(var(--fc-primary-hsl), 40%);
+      cursor: not-allowed;
+    }
 
-## AirBnb
+    .formcarry-container input:focus:required:invalid,
+    .formcarry-container input:focus:invalid, 
+    .formcarry-container select:focus:required:invalid,
+    .formcarry-container select:focus:invalid
+    {
+      color: hsl(var(--fc-error-hsl)); 
+      border-color: hsl(var(--fc-error-hsl));
+      box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
+    }
 
-- [Barn Studio, Cheriton Bishop](https://www.airbnb.co.uk/rooms/33395904?adults=2&check_in=2023-02-10&check_out=2023-02-13&children=0&guests=2&infants=0&role=wishlist_owner&source_impression_id=p3_1571604167_zvZsTfa85HAMr4jO&wl_id=575934231&wl_source=list)
-    - Self-catering apartment (2min drive, walking distance)
-    - 1 Bedroom/Sleeps2
-
-- [Honey Pippin House, Cheriton Bishop](https://www.airbnb.co.uk/rooms/29373662?check_in=2023-02-10&check_out=2023-02-13&guests=2&adults=2)
-    - Self-catering house w. hot tub 
-    - (2min drive, walking distance)
-    - 4 Bedroom/ Sleeps 8 
-
-- [Higher Thornwood Cottage, Tedburn St Mary](https://www.airbnb.co.uk/rooms/24710144?check_in=2023-02-10&check_out=2023-02-13&guests=2&adults=2)
-    - Self-catering house (10min drive)
-    - 4 Bedroom/Sleeps 7 
-
-## Holiday Cottages
-
-- [Downhouse Farm, nr Tedburn St Mary](https://www.vrbo.com/en-gb/p6831669?preferlocale=true&vgdc=HAUK)
-    - Self-catering house (10min drive)
-    - 7 Bedroom/Sleeps 10
-
-- [Hare Path Farm, nr Drewsteignton](https://www.harepathfarmbarns.com/)
-    - 2 Self-catering Barns (10min drive)
-    - 1 Bedroom/Sleeps 2 adults, 2 kids 
-    - 1 Bedroom /Sleeps 2
-
-- [3 x Clifford Cottages, Drewsteignton](https://www.cliffordbarton.co.uk/accommodation/)
-    - 3 Self-catering Cottages (10min drive)
-    - 3 Bedroom/Sleeps 8
-    - 2 Bedroom/Sleeps 5 
-    - 2 Bedroom/Sleeps 5 
-
-- [East Underdown Cottages, Drewsteignton](https://eastunderdown.co.uk/index.php)
-    - 3 Self-catering Cottages w.indoor pool (10min drive)
-    - 4 Bedroom/Sleeps 8
-    - 2 Bedroom/Sleeps 4
-    - 2 Bedroom/Sleeps 4
-
-- [Primrose Cottage, Drewsteignton](https://www.helpfulholidays.co.uk/cottage/Devon-Rectory-Wood/Primrose-Cottage-975865.html#map_wrp)
-    - Self-catering cottage (10min drive)
-    - 2 Bedroom/Sleeps 4
-
-- [Michaelmas Cottage, Drewsteignton](https://www.sykescottages.co.uk/cottage/Devon-Drewsteignton/Michaelmas-Cottage-975813.html?gclid=Cj0KCQjwi7DtBRCLARIsAGCJWBoZrSdzxXRphn8559ybLftOZprXVkhg_DVt7ku_RbsymhQMxUtaGJ0aAovbEALw_wcB&pcrid=275245603430&pkw=michaelmas%20cottage%20drewsteignton&pmt=e&rfx=3&slid=#duration=3&start=2020-07-24&calendar=2020-07&changeover=5)
-    - Self-catering cottage (10min drive)
-    - 4 Bedroom/Sleeps 6
-
-- [Bowbeer Barn, Drewsteignton](https://www.helpfulholidays.co.uk/cottage/Devon-Bowbeer/Bowbeer-Barn-975825.html)
-    - Self-catering cottage (10min drive)
-    - 2 Bedroom/Sleeps 4
-
-- [Rookwood Cottage, Drewsteignton](https://www.rookwoodcottage.com/)
-    - Self-catering cottage (10min drive)
-    - 2 Bedroom/Sleeps 4
-
-- [The Old Dairy, Dunsford](https://www.olddairydunsford.co.uk/)
-    - Self-catering cottage (15min drive)
-    - 1 Bedroom/Sleeps 2
-
-- [Budleigh Farm Cottages, Newton Abbot](https://www.booking.com/hotel/gb/budleigh-farm.html)
-    - 3 Self-catering Cottages (20min drive)
-    - 1 Bedroom / Sleeps 3 
-    - 1 Bedroom / Sleeps 3 
-    - 1 Bedroom / Sleeps 3 
-
-- [Swallows Cottage, Falkedon nr Spreyton](https://www.swallowsatfalkedon.co.uk/the-accommodation.html)
-Self-catering cottage (18min drive)
-    - 1 Bedroom/Sleeps 2
+    /*=====  End of Fields  ======*/
+</style>
