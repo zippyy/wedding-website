@@ -4,11 +4,10 @@ title: "Gifts"
 giftUrl: "https://www.collectionpot.com/pot/3015949/"
 ---
 
-The most important thing to us is that you are able to celebrate with us on our wedding day. However, if you wish to give a gift, we will gratefully accept a small contribution towards our honeymoon or settling into our new home.
-
+The most important thing to us is that you are able to celebrate with us on our wedding day. However, if you wish to give a gift, we will gratefully accept.
 <br/>
 
-<figure>
+<!-- <figure>
     <blockquote>
         <p>Your coming to our wedding is a gift</p>
         <p>Greater than rubies, or some shop-bought thing.</p>
@@ -20,7 +19,7 @@ The most important thing to us is that you are able to celebrate with us on our 
         <p>And seeing your dear faces when we say our vows.</p>
     </blockquote>
     <figcaption>-Paul Wilson, up-and-coming poetic sensation/Father of the Groom</figcaption>
-</figure>
+</figure> -->
 
 
 <br/>
