@@ -4,8 +4,12 @@ title: "Gifts"
 giftUrl: "https://www.collectionpot.com/pot/3015949/"
 ---
 
-The most important thing to us is that you are able to celebrate with us on our wedding day. However, if you wish to give a gift, we will gratefully accept.
+The most important thing to us is that you are able to celebrate with us on our wedding day. However, if you wish to give a gift, we will gratefully accept. Please see the Registry links below.
 <br/>
+<br>
+
+
+<!-- https://www.amazon.com/wedding/share/victorianobennett -->
 
 <!-- <figure>
     <blockquote>
