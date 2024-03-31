@@ -3,6 +3,10 @@ draft: false
 title: "Order of Events"
 ---
 
+<div style="text-align: center;">
+
+
+
 <!-- ## 1:30pm - Arrivals
 
 Everyone arrives at Higher Eggbeer
@@ -46,3 +50,7 @@ _Venue Bar closes shortly after midnight_
 The **Banquet Barn** will shut at around midnight… but the party doesn’t need to end there!
 
 The smaller **‘Pub’ Barn** will be opened with a few bottles and maybe some kegs, for those hardcore enough to stay up! -->
+
+</p>
+
+</div>
