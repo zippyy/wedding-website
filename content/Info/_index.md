@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Guest Info"
+title: "Info"
 ---
 
 test
