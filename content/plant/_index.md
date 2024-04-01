@@ -1,18 +1,6 @@
 ---
 draft: false
-title: "Planting your invitation"
+title: "Guest Info"
 ---
 
-1. Soak the seeded paper in water for at least twelve hours, to swell the seeds and aid germination.
-
-<br/>
-
-2. Cover with a thin layer of soil and keep moist by spraying daily until seedlings are established.
-
-<br/>
-
-3. Germination time is approximately seven to ten days. If planting outdoors it is best to sow in late spring or early summer, to avoid frosts.
-
-<br/>
-
-4. Can be planted and grown indoors or outdoors.
+<iframe data-tally-src="https://tally.so/embed/wa6kkb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="494" frameborder="0" marginheight="0" marginwidth="0" title="Guest Info"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
