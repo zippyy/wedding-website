@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: var(--color-primary-a90);
+  background-color: var(--dusty-pink);
   font-family: var(--main-font);
 
   position: absolute;
