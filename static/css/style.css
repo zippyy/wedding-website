@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: var(--palegreen);
+  background-color: var(--dusty-pink);
   font-family: var(--main-font);
 
   position: absolute;
@@ -40,7 +40,7 @@ html {
   --cream: #FAF2DA;
   --light-green: #8E9775;
   --dark-green: #4A503D;
-  --palegreen: #E28F83;
+  --dusty-pink: #E28F83;
 }
 
 /* IMAGES - DESKTOP PARALLAX SCROLLING */
@@ -76,7 +76,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--palegreen);
+  background-color: var(--dusty-pink);
   color: var(--cream);
   text-shadow: var(--dark-green) 2px 2px 0px;
   letter-spacing: 2px;
@@ -152,7 +152,7 @@ html {
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  background-color: var(--palegreen);
+  background-color: var(--dusty-pink);
   border-radius: 50%;
 }
 
@@ -200,7 +200,7 @@ html {
 
 .nav-mobile__menu {
   display: none;
-  background-color: var(--palegreen);
+  background-color: var(--dusty-pink);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -224,7 +224,7 @@ html {
 
     padding: 20px 20%;
     width: 100%;
-    background-color: var(--palegreen);
+    background-color: var(--dusty-pink);
 
     display: flex;
     flex-direction: row;
@@ -322,7 +322,7 @@ html {
 
 .section__split div:nth-child(1) {
   border-right: none;
-  border-bottom: solid 2px var(--palegreen);
+  border-bottom: solid 2px var(--dusty-pink);
 }
 
 @media only screen and (min-width: 800px) {
@@ -331,7 +331,7 @@ html {
   }
 
   .section__split div:nth-child(1) {
-    border-right: solid 2px var(--palegreen);
+    border-right: solid 2px var(--dusty-pink);
     border-bottom: none;
   }
 }
