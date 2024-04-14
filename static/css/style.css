@@ -76,7 +76,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--dusty-pink);
+  background-color: var(--aquamarine);
   color: var(--cream);
   text-shadow: var(--dark-green) 2px 2px 0px;
   letter-spacing: 2px;
@@ -152,7 +152,7 @@ html {
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  background-color: var(--dusty-pink);
+  background-color: var(--aquamarine);
   border-radius: 50%;
 }
 
@@ -200,7 +200,7 @@ html {
 
 .nav-mobile__menu {
   display: none;
-  background-color: var(--dusty-pink);
+  background-color: var(--aquamarine);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -224,7 +224,7 @@ html {
 
     padding: 20px 20%;
     width: 100%;
-    background-color: var(--dusty-pink);
+    background-color: var(--aquamarine);
 
     display: flex;
     flex-direction: row;
