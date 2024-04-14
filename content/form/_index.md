@@ -8,8 +8,7 @@ draft: false
 Please use the form below to provide us with your mailing address for Save the Date & Invitations.
 <br>
 
-<iframe src="http://form.victorianobennett.wedding/www/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
-
+<iframe style="width: 100%; height: 100px; overflow: hidden;" src="http://form.victorianobennett.wedding/www/" width="100" height="100" scrolling="no">Iframes not supported</iframe>
 </p>
 
 </div>
