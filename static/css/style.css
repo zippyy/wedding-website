@@ -76,7 +76,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--dusty-pink);
+  background-color: var(--mint);
   color: var(--cream);
   text-shadow: var(--dark-green) 2px 2px 0px;
   letter-spacing: 2px;
@@ -152,7 +152,7 @@ html {
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  background-color: var(--dusty-pink);
+  background-color: var(--mint);
   border-radius: 50%;
 }
 
@@ -200,7 +200,7 @@ html {
 
 .nav-mobile__menu {
   display: none;
-  background-color: var(--dusty-pink);
+  background-color: var(--mint);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -224,7 +224,7 @@ html {
 
     padding: 20px 20%;
     width: 100%;
-    background-color: var(--dusty-pink);
+    background-color: var(--mint);
 
     display: flex;
     flex-direction: row;
@@ -322,7 +322,7 @@ html {
 
 .section__split div:nth-child(1) {
   border-right: none;
-  border-bottom: solid 2px var(--dusty-pink);
+  border-bottom: solid 2px var(--mint);
 }
 
 @media only screen and (min-width: 800px) {
@@ -331,7 +331,7 @@ html {
   }
 
   .section__split div:nth-child(1) {
-    border-right: solid 2px var(--dusty-pink);
+    border-right: solid 2px var(--mint);
     border-bottom: none;
   }
 }
