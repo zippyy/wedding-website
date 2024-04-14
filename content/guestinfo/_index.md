@@ -6,8 +6,9 @@ title: "Guest Info"
 <br>
 Please use the form below to provide us with your mailing address for Save the Date & Invitations.
 <br>
+<br>
 
-<iframe data-tally-src="https://tally.so/embed/wa6kkb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="494" frameborder="0" marginheight="0" marginwidth="0" title="Guest Info"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+<iframe src="https://form.victorianobennett.wedding/www/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;"></div><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;"><a href="https://www.embedista.com/">Iframe Generator</a></div><script type="text/javascript" src="https://www.embedista.com/j/if.js"></script> </div><style>.boxes2{height:212px;width:316px;} #new img{max-width:none!important;background:none!important}#iframe{max-height:none!important;max-width:none!important;background:none!important}</style></div>
 
 </p>
 
