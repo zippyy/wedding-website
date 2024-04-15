@@ -3,16 +3,16 @@ draft: false
 title: "Travel Advice"
 ---
 
-<iframe class="google-map" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5988.827892632287!2d-3.7497530637098593!3d50.72189916227002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486dac616bc30dc7%3A0x95241c452f2c9cec!2sEggbeer%20Farm!5e0!3m2!1sen!2suk!4v1659273800010!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe class="google-map" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1767934.9756237252!2d-92.98473942068503!3d30.065591833988943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a4cbaf418deb%3A0x4c1901fe1201158e!2sOur%20Lady%20of%20Prompt%20Succor%20Catholic%20Church!5e0!3m2!1sen!2suk!4v1713140915659!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 ## Address
 
-Higher Eggbeer Farm, 
-Cheriton Bishop, 
-Exeter, 
-EX6 6JQ
+146 4th St, 
+Westwego, LA 
+70094, 
+United States
 
-## By train
+<!--## By train
 
 Trains from London Paddington to Exeter St David’s are approx ~2hrs 15mins.
 
@@ -44,7 +44,7 @@ From Exeter, take the A30 & exit towards Cheriton Bishop / Crockernwell / Drewst
 
 When you arrive in the village of Cheriton Bishop at the ‘The Old Thatch Inn’ pub on the left, take the next left turn (at the yellow house). This will lead you down a short country lane directly to Higher Eggbeer. There are signs pointing to the entrance.
 
- 
+ -->
 
 
 
