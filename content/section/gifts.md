@@ -28,4 +28,4 @@ The most important thing to us is that you are able to celebrate with us on our 
 
 <br/>
 
-If you would like to do this, we've set up an online 'pot' which can be found here: [Collection Pot](https://www.collectionpot.com/pot/3015949/)
+If you would like to do this, we've set up an online 'pot' which can be found here: [Collection Pot](https://victoriano-bennett-wedding.cheddarup.com)
