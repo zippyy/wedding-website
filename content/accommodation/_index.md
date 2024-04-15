@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Guest Info"
+title: "Accommodation"
 ---
 
 filler text here
