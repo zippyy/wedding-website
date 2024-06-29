@@ -5,6 +5,9 @@ title: "Travel and Accommodation"
 
 **Please take a look at our separate pages on <a href="/travel">travel</a> and <a href="/accommodation">accommodation for more info.</a>**
 
+<br>
+<br>
+
 Hotel is located at [1700 Lapalco Blvd, Harvey, LA 70058](https://www.google.com/maps?sca_esv=681d2c6e37d88c1e&sca_upv=1&output=search&q=best+western+plus+westbank&source=lnms&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J-FTPyRYQfdA6VIiYdhSRAfxuYFSuNYte5bcKPnsS8bw8ziMqiV9MWZeqampM2xj_Q1VytNUk9h97TXP1mT6W4M6YG6iEMdLq72PeB9bSso7qWqCCW120l-NNGdVFOd-Sapi46kSQJsLgLGMWEhLGZ_401n-Ee-ngMHBKN37TGaL9CHFIA&entry=mc&ved=1t:200715&ictx=111)
 
 <br>
