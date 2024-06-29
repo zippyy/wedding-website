@@ -8,7 +8,14 @@ The most important thing to us is that you are able to celebrate with us on our 
 <br>
 <br>
 
-[![Amazon Wedding Registry](amazon.png)](https://www.amazon.com/wedding/share/victorianobennett)
+[![Amazon Wedding Registry](amazon.jpg)](https://www.amazon.com/wedding/share/victorianobennett)
+
+<br>
+
+[![Target Wedding Registry](target.jpg)](https://www.target.com/gift-registry/gift/bennettvictoriano)
+
+
+
 
 <!--https://www.amazon.com/wedding/share/victorianobennett -->
 
