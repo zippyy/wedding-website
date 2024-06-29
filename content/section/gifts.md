@@ -9,11 +9,11 @@ The most important thing to us is that you are able to celebrate with us on our 
 <br>
 <div style="text-align: center;">
 
-[![Amazon Wedding Registry](amazon.jpg)](https://www.amazon.com/wedding/share/victorianobennett)
+[Amazon Wedding Registry](https://www.amazon.com/wedding/share/victorianobennett)
 
 <br>
 
-[![Target Wedding Registry](target.jpg)](https://www.target.com/gift-registry/gift/bennettvictoriano)
+[Target Wedding Registry](https://www.target.com/gift-registry/gift/bennettvictoriano)
 
 </div>
 <!--https://www.amazon.com/wedding/share/victorianobennett -->
