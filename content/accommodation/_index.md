@@ -7,11 +7,6 @@ title: "Accommodation"
 ![](weddinghotel.jpg)
 
 <br>
-
-{{ with resources.Get "weddinghotel.jpg" }}
-    {{ partial "img" (dict "img" . "alt" "") }}
-{{ end }}
-
 <br>
 There is a Room Block at The Best Western Plus located at 1700 Lapalco Blvd, Harvey, LA 70058
 <br>
