@@ -16,5 +16,5 @@ Ceremony Church: Our Lady of Prompt Succor located at [146 4th St, Westwego, LA 
 
 <br>
 
-Receptional Venue: Royal Palm located at [1901 Manhattan Blvd # E, Harvey, LA 70058](https://www.google.com/maps/place/Royal+Palm/@29.8856227,-90.055468,17z/data=!3m1!4b1!4m6!3m5!1s0x8620a6c9f8cc0759:0x501ba262c437c160!8m2!3d29.8856227!4d-90.0528931!16s%2Fg%2F1tgn52kh?entry=ttu)
+Reception Venue: Royal Palm located at [1901 Manhattan Blvd # E, Harvey, LA 70058](https://www.google.com/maps/place/Royal+Palm/@29.8856227,-90.055468,17z/data=!3m1!4b1!4m6!3m5!1s0x8620a6c9f8cc0759:0x501ba262c437c160!8m2!3d29.8856227!4d-90.0528931!16s%2Fg%2F1tgn52kh?entry=ttu)
 
