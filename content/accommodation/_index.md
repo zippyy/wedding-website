@@ -23,9 +23,4 @@ There will be transportation available to those staying at the hotel.
 
 </p>
 
-
-{{ with resources.Get "weddinghotel.jpg" }}
-    {{ partial "img" (dict "img" . "alt" "") }}
-{{ end }}
-
 </div>
