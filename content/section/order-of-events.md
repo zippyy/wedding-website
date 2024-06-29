@@ -13,23 +13,20 @@ Everyone arrives at Higher Eggbeer
 
 Warm drink on arrival before the ceremony -->
 
-## 6pm - Ceremony
+## 6:30 PM - Ceremony
 
-At the church
+Our Lady of Prompt Succor
 
-filler here
+Doors open at 6:00 PM
 
-## 8pm - Reception
+## 8 PM - Reception
 
-At the Royal Palm
+The Royal Palm
 
-filler here
+Adults Only
 
-## 11:30pm - After Party @ Boomtown
+## 11:30pm - After Party @ TBA
 
-Party at hotel
-
-filler here
 
 <!-- ## Later... The Party
 
