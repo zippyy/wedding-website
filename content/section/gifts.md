@@ -7,6 +7,7 @@ giftUrl: "https://www.collectionpot.com/pot/3015949/"
 The most important thing to us is that you are able to celebrate with us on our wedding day. However, if you wish to give a gift, we will gratefully accept. Please see the Registry links below.
 <br>
 <br>
+<div style="text-align: center;">
 
 [![Amazon Wedding Registry](amazon.jpg)](https://www.amazon.com/wedding/share/victorianobennett)
 
@@ -14,7 +15,7 @@ The most important thing to us is that you are able to celebrate with us on our 
 
 [![Target Wedding Registry](target.jpg)](https://www.target.com/gift-registry/gift/bennettvictoriano)
 
-
+</div>
 <!--https://www.amazon.com/wedding/share/victorianobennett -->
 
 <!-- <figure>
