@@ -43,6 +43,23 @@ United States
 Harvey, LA 
 70058,
 United States
+<br>
+<br>
+
+## Hotel
+<br>
+<iframe class="google-map" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.6001527915846!2d-90.0525516244527!3d29.875803175009022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a131872daa43%3A0x66b72d449977c175!2sBest%20Western%20Plus%20Westbank!5e0!3m2!1sen!2sus!4v1719695297639!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<br>
+
+## Address 
+
+1700 Lapalco Blvd, 
+Harvey, LA 
+70058
+United States
+
+
 
 
 <!--## By train
