@@ -37,10 +37,10 @@ html {
 :root {
   --main-font: 'Noto Sans', sans-serif;
 
-  --cream: #A4907C;
+  --cream: #FFFED3;
   --light-green: #FBFFDC;
   --dark-green: #D0F5BE;
-  --dusty-pink: #98EECC;
+  --seafoam-green: #93E9BE;
 }
 
 /* IMAGES - DESKTOP PARALLAX SCROLLING */
