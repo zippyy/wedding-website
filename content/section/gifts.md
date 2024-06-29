@@ -8,7 +8,7 @@ The most important thing to us is that you are able to celebrate with us on our 
 <br>
 <br>
 
-[![homepage](amazon.png)](https://www.amazon.com/wedding/share/victorianobennett "Amazon Wedding Registry")
+[![Amazon Wedding Registry](amazon.png)](https://www.amazon.com/wedding/share/victorianobennett)
 
 <!--https://www.amazon.com/wedding/share/victorianobennett -->
 
@@ -28,9 +28,5 @@ The most important thing to us is that you are able to celebrate with us on our 
 
 
 <br/>
-<figure>
-    <blockquote>
+
 If you would like to do this, we've set up an online 'pot' which can be found here: [Collection Pot](https://victoriano-bennett-wedding.cheddarup.com)
-</blockquote>
-<figcaption>-Nick & Melissa</figcaption>
-</figure>

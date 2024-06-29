@@ -1,6 +1,5 @@
 ---
 draft: false
-title: "Couples Shower"
+title: ""
 ---
 
-This will be a different page
