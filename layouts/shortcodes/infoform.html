@@ -3,47 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Page</title>
+    <title>Responsive Form</title>
     <style>
-        /* Basic reset and styling */
         body, html {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1em 0;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 1em;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        main {
-            padding: 2em;
+            height: 100%;
+            width: 100%;
         }
 
         .iframe-container {
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding-bottom: 75%; /* Aspect ratio: 4:3 */
-            height: 0;
+            height: 100%;
             overflow: hidden;
         }
 
@@ -55,34 +30,11 @@
             height: 100%;
             border: 0;
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .iframe-container {
-                padding-bottom: 100%; /* Adjust aspect ratio for smaller screens */
-            }
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Responsive Page</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="content">
-            <h2>Embedded Form</h2>
-            <div class="iframe-container">
-                <iframe src="https://form.victorianobennett.wedding/www/" name="myiFrame" scrolling="no" frameborder="1" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
+    <div class="iframe-container">
+        <iframe src="https://form.victorianobennett.wedding/www/" name="myiFrame" scrolling="no" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
