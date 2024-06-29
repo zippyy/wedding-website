@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--<?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
+
 <svg
    class="header-svg"
    viewBox="90 0 600 600"
@@ -21,14 +23,14 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    inkscape:zoom="1.295"
-   inkscape:cx="299.6139"
-   inkscape:cy="300"
+   inkscape:cx="300.3861"
+   inkscape:cy="299.2278"
    inkscape:window-width="1920"
-   inkscape:window-height="991"
-   inkscape:window-x="-9"
-   inkscape:window-y="-9"
+   inkscape:window-height="1009"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="svg247" />
+   inkscape:current-layer="g1" />
     <g
    id="circle"
    transform="matrix(1.36555,0,0,1.44839,-146.465,-150.754)">
@@ -1275,29 +1277,30 @@
     </defs>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-weight:normal;font-size:96px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:215.238;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-weight:normal;font-size:96px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:215.238;fill:#d4af37;fill-opacity:1;stroke:none"
    x="344.82623"
    y="156.75676"
    id="text247"
    transform="matrix(3.8310015,0.03035877,-0.14172612,3.5252997,-1074.2973,-346.58251)"><tspan
      x="344.82623"
      y="156.75676"
-     id="tspan2"><tspan
-       style="font-size:37.4576px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';fill:#89f52f"
-       id="tspan1">NICK</tspan></tspan></text><text
-   xml:space="preserve"
-   style="font-style:normal;font-weight:normal;font-size:140.991px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.52479"
-   x="340.58423"
-   y="325.22073"
-   id="text248"
-   transform="scale(1.0003315,0.9996686)"><tspan
-     sodipodi:role="line"
-     id="tspan248"
+     id="tspan4"><tspan
+       style="font-size:37.4576px;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, '"
+       id="tspan3">NICK</tspan></tspan></text><g
+   id="g1"><text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:140.991px;line-height:1.25;font-family:sans-serif;fill:#d4af37;fill-opacity:1;stroke:none;stroke-width:3.52479"
      x="340.58423"
      y="325.22073"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';fill:#89f52f;fill-opacity:1;stroke-width:3.52479">&amp;</tspan></text><text
+     id="text248"
+     transform="scale(1.0003315,0.9996686)"><tspan
+       sodipodi:role="line"
+       id="tspan248"
+       x="340.58423"
+       y="325.22073"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';fill:#d4af37;fill-opacity:1;stroke-width:3.52479">&amp;</tspan></text></g><text
    xml:space="preserve"
-   style="font-style:normal;font-weight:normal;font-size:108.694px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.71734"
+   style="font-style:normal;font-weight:normal;font-size:108.694px;line-height:1.25;font-family:sans-serif;fill:#d4af37;fill-opacity:1;stroke:none;stroke-width:2.71734"
    x="298.35486"
    y="350.8063"
    id="text249"
@@ -1306,4 +1309,4 @@
      id="tspan249"
      x="298.35486"
      y="350.8063"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';fill:#89f52f;fill-opacity:1;stroke-width:2.71734">MELISSA</tspan></text></svg>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bauhaus 93';-inkscape-font-specification:'Bauhaus 93, ';fill:#d4af37;fill-opacity:1;stroke-width:2.71734">MELISSA</tspan></text></svg>
