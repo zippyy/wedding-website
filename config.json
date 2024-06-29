@@ -41,3 +41,12 @@
     "background_image_3": "https://res.cloudinary.com/dfwc6rovq/image/upload/v1713139660/IMG_0058_zc4qa3.jpg"
   }
 }
+{
+  "module": {
+    "imports": [
+      {
+        "path": "github.com/UtkarshVerma/hugo-modules/responsive-images"
+      }
+    ]
+  }
+}
