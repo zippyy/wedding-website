@@ -17,7 +17,7 @@ There will be transportation available to those staying at the hotel.
 <br>
 <br>
 
-![](weddinghotel.jpg)
+<!-- ![](weddinghotel.jpg) -->
 
 <br>
 <br>
