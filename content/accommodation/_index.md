@@ -7,6 +7,9 @@ title: "Accommodation"
 ![](weddinghotel.jpg)
 
 <br>
+
+{{< picture src=weddinghotel.jpg aspect_ratio=4:3  widths=400,900 alt="Test Image" >}}
+
 <br>
 There is a Room Block at The Best Western Plus located at 1700 Lapalco Blvd, Harvey, LA 70058
 <br>
