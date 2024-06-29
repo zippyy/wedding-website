@@ -39,6 +39,8 @@ The most important thing to us is that you are able to celebrate with us on our 
 If you would like to give cash, We have a few options below: 
 <div style="text-align: center;">
 
+<br>
+
 [Collection Pot](https://victoriano-bennett-wedding.cheddarup.com) 
 
 <br>
