@@ -43,6 +43,7 @@
   "module": {
     "imports": [
       {
+        "path": "github.com/future-wd/hugo-responsive-images",
         "path": "github.com/UtkarshVerma/hugo-modules/responsive-images"
       }
     ]
