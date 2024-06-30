@@ -36,9 +36,9 @@
     }
   },
   "params": {
-    "background_image_1": "https://res.cloudinary.com/dfwc6rovq/image/upload/v1713138766/2A1DadsffadA_ujtxbq.jpg",
-    "background_image_2": "https://res.cloudinary.com/dfwc6rovq/image/upload/c_crop,ar_16:9/v1713139158/IMG_5621_lxp9cm.jpg",
-    "background_image_3": "https://res.cloudinary.com/dfwc6rovq/image/upload/v1713139660/IMG_0058_zc4qa3.jpg"
+    "background_image_1": "https://res.cloudinary.com/dfwc6rovq/image/upload/v1719765475/B47Y5003_arevys.jpg",
+    "background_image_2": "https://res.cloudinary.com/dfwc6rovq/image/upload/v1719765488/B47Y5057_wmbnqi.jpg",
+    "background_image_3": "https://res.cloudinary.com/dfwc6rovq/image/upload/v1719765448/B47Y4929_pexox5.jpg"
   },
   "module": {
     "imports": [
