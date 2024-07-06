@@ -29,9 +29,11 @@ Church Rehersal
 Time & Location TBA
 
 <br>
+<u>
 
 # *Saturday* 
 
+</u>
 <br>
 
 ### 6:30 PM - Ceremony
