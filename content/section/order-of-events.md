@@ -15,18 +15,24 @@ Warm drink on arrival before the ceremony -->
 
 ## Thursday
 
+<br>
+
 
 ### Rehersal
 
 Church Rehersal
 
+<br>
+
 ### Rerhasal Dinner
 
 Time & Location TBA
 
+<br>
 
 ## Saturday 
 
+<br>
 
 ### 6:30 PM - Ceremony
 
@@ -34,6 +40,7 @@ Our Lady of Prompt Succor
 
 Doors open at 6:00 PM
 
+<br>
 
 ### 8 PM - Reception
 
@@ -41,6 +48,7 @@ The Royal Palm
 
 Adults Only
 
+<br>
 
 ### 12:30pm - After Party
 
