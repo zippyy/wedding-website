@@ -41,7 +41,7 @@ If you would like to give cash, We have a few options below:
 
 <br>
 
-[Collection Pot](https://victoriano-bennett-wedding.cheddarup.com) 
+[Honeymoon Fund](https://victoriano-bennett-wedding.cheddarup.com) 
 
 <br>
 
