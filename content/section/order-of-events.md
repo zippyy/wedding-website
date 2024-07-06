@@ -13,28 +13,28 @@ Everyone arrives at Higher Eggbeer
 
 Warm drink on arrival before the ceremony -->
 
-## Thursday
+# Thursday
 
 <br>
 
 
-#### Rehersal
+### Rehersal
 
 Church Rehersal
 
 <br>
 
-#### Rerhasal Dinner
+### Rerhasal Dinner
 
 Time & Location TBA
 
 <br>
 
-## Saturday 
+# Saturday 
 
 <br>
 
-#### 6:30 PM - Ceremony
+### 6:30 PM - Ceremony
 
 Our Lady of Prompt Succor
 
@@ -42,7 +42,7 @@ Doors open at 6:00 PM
 
 <br>
 
-#### 8 PM - Reception
+### 8 PM - Reception
 
 The Royal Palm
 
@@ -50,7 +50,7 @@ Adults Only
 
 <br>
 
-#### 12:30pm - After Party
+### 12:30pm - After Party
 
 Hotel Courtyard
 
