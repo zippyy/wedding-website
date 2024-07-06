@@ -13,13 +13,17 @@ Everyone arrives at Higher Eggbeer
 
 Warm drink on arrival before the ceremony -->
 
-## Thursday - Rehersal
+### Thursday
+
+## Rehersal
 
 Church Rehersal
 
-## Thursday Evening - Rerhasal Dinner
+## Rerhasal Dinner
 
-Time & Location TBA 
+Time & Location TBA
+
+### Saturday 
 
 ## 6:30 PM - Ceremony
 
