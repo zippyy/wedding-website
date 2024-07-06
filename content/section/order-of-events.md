@@ -13,10 +13,12 @@ Everyone arrives at Higher Eggbeer
 
 Warm drink on arrival before the ceremony -->
 
+<u>
+
 # *Thursday*
 
 <br>
-
+</u>
 
 ### Rehersal
 
