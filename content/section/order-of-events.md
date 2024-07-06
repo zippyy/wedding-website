@@ -13,7 +13,7 @@ Everyone arrives at Higher Eggbeer
 
 Warm drink on arrival before the ceremony -->
 
-# Thursday
+# *Thursday*
 
 <br>
 
@@ -30,7 +30,7 @@ Time & Location TBA
 
 <br>
 
-# Saturday 
+# *Saturday* 
 
 <br>
 
