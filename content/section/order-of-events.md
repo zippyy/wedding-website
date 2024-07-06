@@ -13,7 +13,7 @@ Everyone arrives at Higher Eggbeer
 
 Warm drink on arrival before the ceremony -->
 
-# Thursday
+<h1>Thursday</h1>
 
 ## Rehersal
 
@@ -23,8 +23,8 @@ Church Rehersal
 
 Time & Location TBA
 
-
-# Saturday 
+<br>
+<h1>Saturday</h1> 
 
 ## 6:30 PM - Ceremony
 
