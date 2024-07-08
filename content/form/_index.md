@@ -3,16 +3,15 @@ draft: false
 ---
 
 <style>
-  /* Responsive iframe container */
+  /* Ensure the iframe container is responsive */
   .iframe-container {
     position: relative;
     width: 100%;
-    /* This will be the aspect ratio of the iframe content, adjust as needed */
-    padding-top: 50%; /* Example for a 2:1 aspect ratio */
+    padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
     height: 0;
   }
 
-  /* Responsive iframe */
+  /* Make the iframe itself responsive */
   .iframe-container iframe {
     position: absolute;
     top: 0;
@@ -29,6 +28,11 @@ draft: false
   <br>
   <div class="iframe-container">
     <!-- Responsive iframe -->
-    <iframe src="https://form.victorianobennett.wedding/www/rsvp/" name="myiFrame" scrolling="yes" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://form.victorianobennett.wedding/www/rsvp/" name="myiFrame" scrolling="no" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
+
+
+
+
+
