@@ -7,7 +7,7 @@ draft: false
   Please use the form below to provide us with your RSVP. Please submit the form for every person attending.
   <br>
   
-  <iframe src="https://form.victorianobennett.wedding/www/rsvp" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="800px" allowfullscreen></iframe>
+  <iframe src="https://form.victorianobennett.wedding/www/rsvp/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="800px" allowfullscreen></iframe>
 
 </p>
 </div>
