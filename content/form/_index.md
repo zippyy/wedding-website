@@ -3,11 +3,28 @@ draft: false
 ---
 
 <style>
-  /* Add styles for mobile devices */
+  /* Responsive iframe container */
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+  }
+
+  /* Responsive iframe */
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Adjustments for smaller devices */
   @media only screen and (max-width: 600px) {
-    .responsive-iframe {
-      width: 100%;
-      height: 300px; /* Adjust height as needed */
+    .iframe-container {
+      padding-top: 75%; /* Adjust for aspect ratio */
     }
   }
 </style>
@@ -16,11 +33,11 @@ draft: false
   <br>
   Please use the form below to provide us with your RSVP. Please submit the form for every person attending.
   <br>
-  <div style="max-width: 100%; overflow: hidden;">
-    <!-- Add the 'responsive-iframe' class to your iframe -->
-    <iframe class="responsive-iframe" src="https://form.victorianobennett.wedding/www/rsvp/" style="border:0; marginheight:0; marginwidth:0;" name="myiFrame" scrolling="no" frameborder="0" allowfullscreen></iframe>
+  <div class="iframe-container">
+    <!-- Responsive iframe -->
+    <iframe src="https://form.victorianobennett.wedding/www/rsvp/" name="myiFrame" scrolling="no" frameborder="0" allowfullscreen></iframe>
   </div>
-</p>
 </div>
+
 
 
