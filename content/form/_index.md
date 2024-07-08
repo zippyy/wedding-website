@@ -3,15 +3,15 @@ draft: false
 ---
 
 <style>
-  /* Ensure the iframe container is responsive */
+  /* Responsive iframe container */
   .iframe-container {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
   }
 
-  /* Make the iframe itself responsive */
+  /* Responsive iframe */
   .iframe-container iframe {
     position: absolute;
     top: 0;
@@ -19,6 +19,13 @@ draft: false
     width: 100%;
     height: 100%;
     border: 0;
+  }
+
+  /* Adjustments for smaller devices */
+  @media only screen and (max-width: 600px) {
+    .iframe-container {
+      padding-top: 75%; /* Adjust for aspect ratio */
+    }
   }
 </style>
 
@@ -31,7 +38,6 @@ draft: false
     <iframe src="https://form.victorianobennett.wedding/www/rsvp/" name="myiFrame" scrolling="no" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
-
 
 
 
