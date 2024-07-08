@@ -2,16 +2,6 @@
 draft: false
 ---
 
-<style>
-  /* Add styles for mobile devices */
-  @media only screen and (max-width: 600px) {
-    .responsive-iframe {
-      width: 100%;
-      height: 300px; /* Adjust height as needed */
-    }
-  }
-</style>
-
 <div style="text-align: center;">
   <br>
   Please use the form below to provide us with your RSVP. Please submit the form for every person attending.
