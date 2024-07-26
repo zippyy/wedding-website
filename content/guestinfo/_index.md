@@ -5,7 +5,7 @@ title: "Guest Info"
 <div style="text-align: center;">
 <br>
 
-*Please use the form below to provide us with your mailing address for Save the Date & Invitations.*
+*Please submit the names listed on your invitations.*
 
 <br>
 <br>
