@@ -18,7 +18,7 @@ see the maps below for locations of both the Ceremony and Reception.
 
 ## Ceremony Church
 <br>
-<iframe class="google-map" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1767934.9756237252!2d-92.98473942068503!3d30.065591833988943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a4cbaf418deb%3A0x4c1901fe1201158e!2sOur%20Lady%20of%20Prompt%20Succor%20Catholic%20Church!5e0!3m2!1sen!2suk!4v1713140915659!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe class="google-map" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.259493683112!2d-90.05546802445232!3d29.885622675004008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a6c9f8cc0759%3A0x501ba262c437c160!2sRoyal%20Palm!5e0!3m2!1sen!2sus!4v1719694947241!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <br>
 
