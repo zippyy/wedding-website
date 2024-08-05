@@ -1,7 +1,7 @@
 images: 
-  - image: /uploads/slider/female1.png
+  - image: /uploads/slider/male1.jpg
     content_html: "1"
-  - image: /uploads/slider/male1.png
+  - image: /uploads/slider/female1.jpg
     content_html: "2"
-  - image: /uploads/slider/male2.png
+  - image: /uploads/slider/male2.jpg
     content_html: "3"
