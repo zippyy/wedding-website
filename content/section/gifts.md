@@ -36,13 +36,8 @@ The most important thing to us is that you are able to celebrate with us on our 
 <br>
 <br>
 
-If you would like to give cash, We have a few options below: 
+If you would like to give cash, Please use the link below: 
 <div style="text-align: center;">
-
-<br>
-
-[Honeymoon Fund](https://victoriano-bennett-wedding.cheddarup.com) 
-
 <br>
 
 [Bennett Venmo](https://venmo.com/u/zippyy)
