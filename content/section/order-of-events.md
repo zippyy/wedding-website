@@ -15,10 +15,10 @@ Warm drink on arrival before the ceremony -->
 
 <u>
 
-# *Thursday*
+# *Friday*
 
-<br>
 </u>
+<br>
 
 ### Rehersal
 
@@ -34,12 +34,6 @@ Time & Location TBA
 
 <b><i>Invite Only</i></b>
 
-<br>
-<u>
-
-# *Friday*
-
-</u>
 <br>
 
 ### Bridal Brunch
