@@ -1,0 +1,7 @@
+images: 
+  - image: /uploads/slider/female1.png
+    content_html: "1"
+  - image: /uploads/slider/male1.png
+    content_html: "2"
+  - image: /uploads/slider/male2.png
+    content_html: "3"
