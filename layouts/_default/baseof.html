@@ -14,12 +14,7 @@
 </head>
 <body id="top">
     {{ block "main" . -}}{{- end }}
-    
-    <!-- Include the carousel partial here -->
-    {{ partial "carousel.html" (dict "context" . "items" "1" "height" "50" "unit" "%" "duration" "7000") }}
 
     <script src="{{ .Site.BaseURL }}/js/script.js"></script>
-    <script type="text/javascript" src="{{ .Site.BaseURL }}/js/carousel.js"></script>
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/carousel.css">
 </body>
 </html>
