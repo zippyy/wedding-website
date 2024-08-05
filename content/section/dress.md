@@ -16,6 +16,6 @@ title: "Dress"
 ![Male Inspo 2](uploads/slider/male2.jpg)
 <br>
 
-![Female Inspo 1](uploads/slider/female4.jpg)
+<!-- ![Female Inspo 1](uploads/slider/female4.jpg) -->
 
 </div>
