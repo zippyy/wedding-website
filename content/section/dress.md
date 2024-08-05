@@ -3,9 +3,12 @@ draft: false
 title: "Dress"
 ---
 
-The dress code is Cocktail. Ties are not required. Inspo pictures coming soon! 
+***The dress code is Cocktail. Ties are not required. Inspo pictures coming soon!*** 
+<br>
+<br>
 
-{{< carousel items="1" height="675" width="451" unit="px" duration="7000" >}}
-
-
-<!-- ![Female Inspo 1](image/female1.png) ![Male Inspo 1](image/male1.png) ![Male Inspo 2](image/male2.png) -->
+<!-- {{< carousel items="1" height="675" unit="px" duration="7000" >}} -->
+ 
+![Male Inspo 1](uploads/slider/male1.jpg) 
+![Male Inspo 2](uploads/slider/male2.jpg)
+![Female Inspo 1](uploads/slider/female4.jpg)
