@@ -5,7 +5,7 @@ title: "Dress"
 
 <div style="text-align: center;">
 
-***The dress code is Cocktail. Ties are not required.*** 
+***The dress code is Cocktail. Ties are not required. Colourful attire encouraged!*** 
 <br>
 <br>
 
