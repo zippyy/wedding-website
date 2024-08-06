@@ -36,7 +36,7 @@ Church Rehersal
 
 <br>
 
-### Rerhasal Dinner
+### Rehersal Dinner
 
 Time & Location TBA  
 
