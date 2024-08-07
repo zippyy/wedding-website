@@ -20,14 +20,6 @@ Warm drink on arrival before the ceremony -->
 </u>
 <br>
 
-### Bridal Brunch
-
-Time & Location TBA  
-
-<b><i>Invite Only</i></b>
-
-<br>
-
 ### Rehersal
 
 Church Rehersal  
