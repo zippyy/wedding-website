@@ -22,17 +22,13 @@ Warm drink on arrival before the ceremony -->
 
 ### Rehersal
 
-Church Rehersal  
-
-<b><i>Invite Only</i></b>
+Church Rehersal
 
 <br>
 
 ### Rehersal Dinner
 
-Time & Location TBA  
-
-<b><i>Invite Only</i></b>
+Time & Location TBA
 
 <br>
 
