@@ -6,6 +6,10 @@ title: "Guest Info"
 <br>
 
 *Please submit each name listed.*
+<br>
+<u>
+***This is an Adult only event***
+</u>
 
 <br>
 <br>
