@@ -5,7 +5,7 @@ title: "Guest Info"
 <div style="text-align: center;">
 <br>
 
-***Please submit each name listed.***
+***Please submit for each individual listed.***
 <br>
 <br>
 <u>
