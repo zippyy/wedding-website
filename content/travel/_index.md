@@ -3,6 +3,9 @@ draft: false
 title: "Travel Advice"
 ---
 
+<div style="text-align: center;">
+
+
 Fly into New orleans International (MSY)
 
 <br>
@@ -111,3 +114,4 @@ When you arrive in the village of Cheriton Bishop at the â€˜The Old Thatch Innâ€
 
 
 
+</div>
