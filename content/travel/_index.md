@@ -21,7 +21,7 @@ If you’re looking to explore the city while in town, we recommend taking a rid
 <br>
 You can take the street car to most places in the city like uptown. Ride share is available as well. 
 <br>
-
+<br>
 Please reach out if you need more suggestions!
 
 <br>
