@@ -5,6 +5,8 @@ title: "Travel Advice"
 
 <div style="text-align: center;">
 
+<br>
+
 If you’re looking to explore the city while in town, we recommend taking a ride share from the hotel and then using the street car in the French quarter. 
 <br>
 <br>
