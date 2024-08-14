@@ -25,6 +25,7 @@ If you’re looking to explore the city while in town, we recommend taking a rid
 <br>
 <br>
 You can take the street car to most places in the city like uptown. Ride share is available as well. 
+See [Here](https://www.norta.com/ride-with-us/how-to-pay/fares) for information on the street car fares.
 <br>
 <br>
 Please reach out if you need more suggestions!
