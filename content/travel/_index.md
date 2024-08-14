@@ -17,7 +17,10 @@ The Church and the Reception Venue are about 15 minutes apart.
 see the maps below for locations of both the Ceremony and Reception.
 <br>
 <br>
+<br>
+
 If you’re looking to explore the city while in town, we recommend taking a ride share from the hotel and then using the street car in the French quarter. 
+<br>
 <br>
 You can take the street car to most places in the city like uptown. Ride share is available as well. 
 <br>
