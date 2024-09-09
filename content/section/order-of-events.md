@@ -55,7 +55,7 @@ The Royal Palm
 
 <br>
 
-### 12:30pm - After Party
+### 12:30 AM - After Party
 
 Hotel Courtyard
 
