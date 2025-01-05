@@ -5,7 +5,7 @@ title: "Guest Info"
 <div style="text-align: center;">
 <br>
 
-***Please submit for each individual listed.***
+***Please submit ONE entry for EACH individual listed on the Envelope.***
 <br>
 <br>
 <u>
