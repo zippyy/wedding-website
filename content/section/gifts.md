@@ -15,6 +15,10 @@ The most important thing to us is that you are able to celebrate with us on our 
 
 [Target Wedding Registry](https://www.target.com/gift-registry/gift/bennettvictoriano)
 
+<br>
+
+Please ship gifts to 6826 Becknell Dr, Colorado Springs, Colorado, 80923
+
 </div>
 <!--https://www.amazon.com/wedding/share/victorianobennett -->
 
