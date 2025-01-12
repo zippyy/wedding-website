@@ -17,6 +17,10 @@ The most important thing to us is that you are able to celebrate with us on our 
 
 <br>
 
+[Macy's Wedding Registry](https://www.macys.com/registry/Melissa-Victoriano-Nicholas-Bennett/2543533)
+
+<br>
+
 Please ship gifts to 6826 Becknell Dr, Colorado Springs, Colorado, 80923
 
 </div>
