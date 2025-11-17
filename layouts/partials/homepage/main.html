@@ -5,230 +5,148 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-<style>
-/* ----- LAYOUT ----- */
-#married-flip-timer {
-  text-align: center;
-  margin-top: 40px;
-  font-family: "Share Tech Mono", monospace;
-}
+<div id="married-timer" style="text-align:center; margin-top:40px;">
 
-#married-flip-timer h2 {
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 35px;
-}
+  <h2 style="font-size:32px; font-weight:400; margin-bottom:30px;">
+    Days Since We Got Married
+  </h2>
 
-/* ----- UNITS CONTAINER ----- */
-.flip-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-/* ----- LABELS ----- */
-.unit-label {
-  font-size: 20px;
-  margin-top: 12px;
-  color: #111;
-}
-
-/* ----- SEPARATOR DOTS ----- */
-.flip-sep {
-  font-size: 42px;
-  color: #444;
-  margin-bottom: 60px;
-}
-
-/* ----- DIGIT PANEL STYLE ----- */
-.flip-unit {
-  text-align: center;
-}
-
-.flip-group {
-  display: flex;
-  gap: 8px;
-}
-
-/* Each digit block container */
-.flip-card {
-  position: relative;
-  width: 80px;
-  height: 110px;
-  perspective: 300px;
-}
-
-/* Shared styles for all digit faces */
-.flip-card-face {
-  width: 100%;
-  height: 50%;
-  background: #2e2e2e;
-  color: #c7c7c7;
-  font-size: 85px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-/* Top and bottom halves */
-.flip-card-top {
-  border-bottom: 1px solid #111;
-}
-
-.flip-card-bottom {
-  border-top: 1px solid #111;
-  transform-origin: top;
-}
-
-/* Animated flipping half */
-.flip-animate {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 50%;
-  width: 100%;
-  background: #2e2e2e;
-  color: #c7c7c7;
-  font-size: 85px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-origin: bottom;
-  animation: flipDown 0.7s ease-in-out forwards;
-}
-
-/* Flip animation */
-@keyframes flipDown {
-  0%   { transform: rotateX(0deg); }
-  100% { transform: rotateX(-90deg); }
-}
-
-/* Responsive */
-@media(max-width: 700px) {
-  .flip-card { width: 55px; height: 75px; }
-  .flip-card-face, .flip-animate { font-size: 55px; }
-  .flip-sep { font-size: 28px; }
-  .unit-label { font-size: 16px; }
-}
-</style>
-
-<div id="married-flip-timer">
-  <h2>Days Since We Got Married</h2>
-
-  <div class="flip-row">
+  <div style="display:flex; justify-content:center; align-items:center; gap:40px;">
 
     <!-- DAYS -->
-    <div class="flip-unit">
-      <div class="flip-group">
-        <div class="flip-card" data-id="d1"></div>
-        <div class="flip-card" data-id="d2"></div>
+    <div class="unit">
+      <div class="digit-wrap">
+        <span class="digit" id="d1"></span>
+        <span class="digit" id="d2"></span>
       </div>
-      <div class="unit-label">Days</div>
+      <div class="label">Days</div>
     </div>
 
-    <div class="flip-sep">•</div>
+    <div class="sep">•</div>
 
     <!-- HOURS -->
-    <div class="flip-unit">
-      <div class="flip-group">
-        <div class="flip-card" data-id="h1"></div>
-        <div class="flip-card" data-id="h2"></div>
+    <div class="unit">
+      <div class="digit-wrap">
+        <span class="digit" id="h1"></span>
+        <span class="digit" id="h2"></span>
       </div>
-      <div class="unit-label">Hours</div>
+      <div class="label">Hours</div>
     </div>
 
-    <div class="flip-sep">•</div>
+    <div class="sep">•</div>
 
     <!-- MINUTES -->
-    <div class="flip-unit">
-      <div class="flip-group">
-        <div class="flip-card" data-id="m1"></div>
-        <div class="flip-card" data-id="m2"></div>
+    <div class="unit">
+      <div class="digit-wrap">
+        <span class="digit" id="m1"></span>
+        <span class="digit" id="m2"></span>
       </div>
-      <div class="unit-label">Minutes</div>
+      <div class="label">Minutes</div>
     </div>
 
-    <div class="flip-sep">•</div>
+    <div class="sep">•</div>
 
     <!-- SECONDS -->
-    <div class="flip-unit">
-      <div class="flip-group">
-        <div class="flip-card" data-id="s1"></div>
-        <div class="flip-card" data-id="s2"></div>
+    <div class="unit">
+      <div class="digit-wrap">
+        <span class="digit" id="s1"></span>
+        <span class="digit" id="s2"></span>
       </div>
-      <div class="unit-label">Seconds</div>
+      <div class="label">Seconds</div>
     </div>
 
   </div>
 </div>
 
-<script>
-const weddingDate = new Date("2025-04-26T18:00:00");
-const lastValues = {};
-
-function createDigitHTML(top, bottom) {
-  return `
-    <div class="flip-card-top flip-card-face">${top}</div>
-    <div class="flip-card-bottom flip-card-face">${bottom}</div>
-  `;
-}
-
-function flipDigit(card, current, next) {
-  if (current === next) return; // No flip
-
-  // Top and bottom static states
-  card.innerHTML = createDigitHTML(current, next);
-
-  // Add animated flipping layer
-  const flap = document.createElement("div");
-  flap.className = "flip-animate";
-  flap.textContent = current;
-  card.appendChild(flap);
-
-  // Remove after animation
-  setTimeout(() => flap.remove(), 700);
-}
-
-function updateTimer() {
-  const now = new Date();
-  let diff = now - weddingDate;
-  if (diff < 0) diff = 0;
-
-  const totalSec = Math.floor(diff / 1000);
-  const days = Math.floor(totalSec / 86400);
-  const hrs = Math.floor((totalSec % 86400) / 3600);
-  const mins = Math.floor((totalSec % 3600) / 60);
-  const secs = totalSec % 60;
-
-  const ds = String(days).padStart(2, "0");
-  const hs = String(hrs).padStart(2, "0");
-  const ms = String(mins).padStart(2, "0");
-  const ss = String(secs).padStart(2, "0");
-
-  const digits = {
-    d1: ds[0], d2: ds[1],
-    h1: hs[0], h2: hs[1],
-    m1: ms[0], m2: ms[1],
-    s1: ss[0], s2: ss[1]
-  };
-
-  // Apply updates + flip animations
-  for (const id in digits) {
-    const card = document.querySelector(`.flip-card[data-id="${id}"]`);
-    const newVal = digits[id];
-    const oldVal = lastValues[id] ?? newVal;
-
-    flipDigit(card, oldVal, newVal);
-    lastValues[id] = newVal;
+<style>
+  #married-timer .digit-wrap {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
   }
-}
 
-updateTimer();
-setInterval(updateTimer, 1000);
+  #married-timer .digit {
+    width: 80px;
+    height: 110px;
+    background: #2e2e2e;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 85px;
+    color: #c7c7c7;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  }
+
+  #married-timer .label {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #111;
+  }
+
+  #married-timer .sep {
+    font-size: 42px;
+    color: #444;
+    margin-bottom: 60px;
+  }
+
+  @media(max-width: 700px) {
+    #married-timer .digit {
+      width: 55px;
+      height: 75px;
+      font-size: 55px;
+    }
+    #married-timer .label {
+      font-size: 16px;
+    }
+    #married-timer .sep {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+</style>
+
+<script>
+  const weddingDate = new Date("2025-04-26T18:00:00"); 
+
+  function pad(num) {
+    return num.toString().padStart(2, "0");
+  }
+
+  function updateTimer() {
+    const now = new Date();
+    let diff = now - weddingDate;
+    if (diff < 0) diff = 0;
+
+    const totalSec = Math.floor(diff / 1000);
+    const days = Math.floor(totalSec / 86400);
+    const hrs = Math.floor((totalSec % 86400) / 3600);
+    const mins = Math.floor((totalSec % 3600) / 60);
+    const secs = totalSec % 60;
+
+    const ds = pad(days);
+    const hs = pad(hrs);
+    const ms = pad(mins);
+    const ss = pad(secs);
+
+    document.getElementById("d1").textContent = ds[0];
+    document.getElementById("d2").textContent = ds[1];
+
+    document.getElementById("h1").textContent = hs[0];
+    document.getElementById("h2").textContent = hs[1];
+
+    document.getElementById("m1").textContent = ms[0];
+    document.getElementById("m2").textContent = ms[1];
+
+    document.getElementById("s1").textContent = ss[0];
+    document.getElementById("s2").textContent = ss[1];
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
 </script>
 
 <br>
