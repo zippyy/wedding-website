@@ -3,236 +3,213 @@
 
     <br>
 
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
-<style>
-/* --- ISOLATION CONTAINER (prevents theme interference) --- */
-#logwork-clone {
-  all: initial;
-  font-family: 'Share Tech Mono', monospace;
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-/* Re-enable only needed properties */
-#logwork-clone * {
-  all: unset;
-  display: revert;
-  box-sizing: border-box;
-  font-family: inherit;
-}
-
-/* --- TITLE --- */
-#logwork-clone-title {
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 35px;
-  text-align: center;
-  display: block;
-}
-
-/* --- LAYOUT FOR UNITS --- */
-.lw-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-/* --- UNIT WRAPPER --- */
-.lw-unit {
-  text-align: center;
-}
-
-/* --- LABELS --- */
-.lw-label {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #111;
-  font-family: sans-serif;
-}
-
-/* --- SEPARATOR DOT --- */
-.lw-sep {
-  font-size: 40px;
-  color: #444;
-}
-
-/* --- DIGIT GROUP (two digits) --- */
-.lw-digits {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-}
-
-/* --- FLIP CARD --- */
-.flip-card {
-  position: relative;
-  width: 80px;       /* matches LogWork */
-  height: 110px;     /* matches LogWork */
-  perspective: 350px;
-}
-
-/* --- STATIC FACES --- */
-.flip-top,
-.flip-bottom {
-  background: #2f2f2f;
-  color: #c7c7c7;
-  font-size: 85px;
-  line-height: 1;
-  text-align: center;
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-.flip-top {
-  border-bottom: 1px solid #111;
-}
-
-.flip-bottom {
-  border-top: 1px solid #111;
-}
-
-/* --- FLIP ANIMATION PANEL --- */
-.flip-animate {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 50%;
-  width: 100%;
-  background: #2f2f2f;
-  color: #c7c7c7;
-  font-size: 85px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-origin: bottom;
-  animation: flipAnim 0.7s ease-in-out forwards;
-}
-
-/* --- ACTUAL ANIMATION --- */
-@keyframes flipAnim {
-  0%   { transform: rotateX(0deg); }
-  100% { transform: rotateX(-90deg); }
-}
-
-/* --- RESPONSIVE MATCHING LOGWORK’S SCALE --- */
-@media(max-width: 700px) {
-  .flip-card { width: 55px; height: 75px; }
-  .flip-top, .flip-bottom, .flip-animate { font-size: 55px; }
-  .lw-sep { font-size: 28px; }
-  .lw-label { font-size: 16px; }
-}
-</style>
-
-
-
-<div id="logwork-clone">
-
-  <span id="logwork-clone-title">Days Since We Got Married</span>
-
-  <div class="lw-row">
-
-    <!-- DAYS -->
-    <div class="lw-unit">
-      <div class="lw-digits" id="days-digits"></div>
-      <div class="lw-label">Days</div>
-    </div>
-
-    <span class="lw-sep">•</span>
-
-    <!-- HOURS -->
-    <div class="lw-unit">
-      <div class="lw-digits" id="hours-digits"></div>
-      <div class="lw-label">Hours</div>
-    </div>
-
-    <span class="lw-sep">•</span>
-
-    <!-- MINUTES -->
-    <div class="lw-unit">
-      <div class="lw-digits" id="minutes-digits"></div>
-      <div class="lw-label">Minutes</div>
-    </div>
-
-    <span class="lw-sep">•</span>
-
-    <!-- SECONDS -->
-    <div class="lw-unit">
-      <div class="lw-digits" id="seconds-digits"></div>
-      <div class="lw-label">Seconds</div>
-    </div>
-
-  </div>
-</div>
-
-
+    <div id="weddingTimer"></div>
 
 <script>
-const start = new Date("2025-04-26T18:00:00");
-const lastVals = {};
+// === SHADOW DOM TIMER COMPONENT (UNBREAKABLE) ===
+(function() {
 
-function createDigitCard(val) {
-  return `
-    <div class="flip-card" data-val="${val}">
-      <div class="flip-top">${val}</div>
-      <div class="flip-bottom">${val}</div>
-    </div>`;
-}
+  const container = document.getElementById("weddingTimer");
+  const shadow = container.attachShadow({ mode: "open" });
 
-function updateDigitGroup(container, oldStr, newStr) {
-  const digits = newStr.padStart(oldStr.length, "0").split("");
+  shadow.innerHTML = `
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  // Rebuild HTML if digit count changed (ex: days growing from 2 to 3 digits)
-  if (container.children.length !== digits.length) {
-    container.innerHTML = digits.map(d => createDigitCard(d)).join("");
+  <style>
+    :host {
+      font-family: 'Share Tech Mono', monospace;
+      display: block;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .unit {
+      text-align: center;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .sep {
+      font-size: 40px;
+      color: #444;
+      margin-bottom: 60px;
+    }
+
+    .digits {
+      display: flex;
+      gap: 6px;
+    }
+
+    .card {
+      position: relative;
+      width: 80px;
+      height: 110px;
+      perspective: 300px;
+    }
+
+    .top, .bottom {
+      background: #2f2f2f;
+      color: #c7c7c7;
+      font-size: 85px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      overflow: hidden;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      line-height: 1;
+    }
+
+    .top {
+      border-bottom: 1px solid #111;
+    }
+
+    .bottom {
+      border-top: 1px solid #111;
+    }
+
+    .flip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #2f2f2f;
+      color: #c7c7c7;
+      font-size: 85px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-origin: bottom;
+      animation: flipAnim 0.7s forwards ease-in-out;
+    }
+
+    @keyframes flipAnim {
+      from { transform: rotateX(0); }
+      to { transform: rotateX(-90deg); }
+    }
+
+    @media (max-width: 700px) {
+      .card { width: 55px; height: 75px; }
+      .top, .bottom, .flip { font-size: 55px; }
+      .sep { font-size: 28px; }
+      .label { font-size: 16px; }
+    }
+  </style>
+
+  <h2>Days Since We Got Married</h2>
+
+  <div class="row">
+    <div class="unit">
+      <div class="digits" id="d"></div>
+      <div class="label">Days</div>
+    </div>
+
+    <div class="sep">•</div>
+
+    <div class="unit">
+      <div class="digits" id="h"></div>
+      <div class="label">Hours</div>
+    </div>
+
+    <div class="sep">•</div>
+
+    <div class="unit">
+      <div class="digits" id="m"></div>
+      <div class="label">Minutes</div>
+    </div>
+
+    <div class="sep">•</div>
+
+    <div class="unit">
+      <div class="digits" id="s"></div>
+      <div class="label">Seconds</div>
+    </div>
+  </div>
+  `;
+
+  const start = new Date("2025-04-26T18:00:00");
+  const lastVal = { d: "", h: "", m: "", s: "" };
+
+  function createCard(val) {
+    return `
+      <div class="card" data-val="${val}">
+        <div class="top">${val}</div>
+        <div class="bottom">${val}</div>
+      </div>`;
   }
 
-  // Compare each digit and animate if changed
-  [...container.children].forEach((card, i) => {
-    const oldVal = oldStr[i] || "0";
-    const newVal = digits[i];
-    if (oldVal !== newVal) {
-      card.innerHTML = `
-        <div class="flip-top">${oldVal}</div>
-        <div class="flip-bottom">${newVal}</div>
-      `;
-      const anim = document.createElement("div");
-      anim.className = "flip-animate";
-      anim.textContent = oldVal;
-      card.appendChild(anim);
-      setTimeout(() => anim.remove(), 800);
+  function updateDigits(root, oldStr, newStr) {
+    newStr = newStr.toString();
+
+    if (root.children.length !== newStr.length) {
+      root.innerHTML = "";
+      [...newStr].forEach(v => root.innerHTML += createCard(v));
     }
-  });
-}
 
-function tick() {
-  const now = new Date();
-  const diff = Math.max(0, now - start);
+    [...newStr].forEach((v, i) => {
+      const card = root.children[i];
+      const old = oldStr[i] ?? v;
 
-  const totalSec = Math.floor(diff / 1000);
-  const d = Math.floor(totalSec / 86400).toString();
-  const h = Math.floor((totalSec % 86400) / 3600).toString().padStart(2,"0");
-  const m = Math.floor((totalSec % 3600) / 60).toString().padStart(2,"0");
-  const s = (totalSec % 60).toString().padStart(2,"0");
+      if (old !== v) {
+        card.innerHTML = `
+          <div class="top">${old}</div>
+          <div class="bottom">${v}</div>
+        `;
+        const flip = document.createElement("div");
+        flip.className = "flip";
+        flip.textContent = old;
+        card.appendChild(flip);
+        setTimeout(() => flip.remove(), 800);
+      }
+    });
+  }
 
-  updateDigitGroup(document.getElementById("days-digits"), lastVals.d || "", d);
-  updateDigitGroup(document.getElementById("hours-digits"), lastVals.h || "00", h);
-  updateDigitGroup(document.getElementById("minutes-digits"), lastVals.m || "00", m);
-  updateDigitGroup(document.getElementById("seconds-digits"), lastVals.s || "00", s);
+  function tick() {
+    const now = new Date();
+    let diff = now - start;
+    if (diff < 0) diff = 0;
 
-  lastVals.d = d;
-  lastVals.h = h;
-  lastVals.m = m;
-  lastVals.s = s;
-}
+    const sec = Math.floor(diff / 1000);
+    const d = Math.floor(sec / 86400).toString();
+    const h = String(Math.floor((sec % 86400) / 3600)).padStart(2, "0");
+    const m = String(Math.floor((sec % 3600) / 60)).padStart(2, "0");
+    const s = String(sec % 60).padStart(2, "0");
 
-tick();
-setInterval(tick, 1000);
+    updateDigits(shadow.getElementById("d"), lastVal.d, d);
+    updateDigits(shadow.getElementById("h"), lastVal.h, h);
+    updateDigits(shadow.getElementById("m"), lastVal.m, m);
+    updateDigits(shadow.getElementById("s"), lastVal.s, s);
+
+    lastVal.d = d;
+    lastVal.h = h;
+    lastVal.m = m;
+    lastVal.s = s;
+  }
+
+  tick();
+  setInterval(tick, 1000);
+
+})();
 </script>
 
 <br>
