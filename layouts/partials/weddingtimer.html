@@ -1,215 +1,222 @@
-<div id="weddingTimer"></div>
+<div class="married-timer" data-married-timer>
+  <h2 class="married-timer-heading">Days Since We Got Married</h2>
 
-<script>
-// Prevent double-loading
-if (!window.__WEDDING_TIMER_LOADED__) {
-window.__WEDDING_TIMER_LOADED__ = true;
-
-// === SHADOW DOM TIMER COMPONENT (UNBREAKABLE) ===
-(function() {
-
-  const container = document.getElementById("weddingTimer");
-  if (!container) return;
-
-  const shadow = container.attachShadow({ mode: "open" });
-
-  shadow.innerHTML = `
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
-  <style>
-    :host {
-      font-family: 'Share Tech Mono', monospace;
-      display: block;
-      text-align: center;
-      padding: 30px 0;
-    }
-
-    h2 {
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
-
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .unit {
-      text-align: center;
-    }
-
-    .label {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #111;
-    }
-
-    .sep {
-      font-size: 40px;
-      color: #444;
-      margin-bottom: 60px;
-    }
-
-    .digits {
-      display: flex;
-      gap: 6px;
-    }
-
-    .card {
-      position: relative;
-      width: 80px;
-      height: 110px;
-      perspective: 300px;
-    }
-
-    .top, .bottom {
-      background: #2f2f2f;
-      color: #c7c7c7;
-      font-size: 85px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50%;
-      overflow: hidden;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #000;
-      line-height: 1;
-    }
-
-    .top {
-      border-bottom: 1px solid #111;
-    }
-
-    .bottom {
-      border-top: 1px solid #111;
-    }
-
-    .flip {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: #2f2f2f;
-      color: #c7c7c7;
-      font-size: 85px;
-      line-height: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform-origin: bottom;
-      animation: flipAnim 0.7s forwards ease-in-out;
-    }
-
-    @keyframes flipAnim {
-      from { transform: rotateX(0); }
-      to { transform: rotateX(-90deg); }
-    }
-
-    @media (max-width: 700px) {
-      .card { width: 55px; height: 75px; }
-      .top, .bottom, .flip { font-size: 55px; }
-      .sep { font-size: 28px; }
-      .label { font-size: 16px; }
-    }
-  </style>
-
-  <h2>Days Since We Got Married</h2>
-
-  <div class="row">
-    <div class="unit">
-      <div class="digits" id="d"></div>
-      <div class="label">Days</div>
+  <div class="married-timer-row">
+    <div class="married-timer-unit">
+      <div class="married-timer-digits" data-part="days"></div>
+      <div class="married-timer-label">Days</div>
     </div>
 
-    <div class="sep">•</div>
+    <div class="married-timer-sep">•</div>
 
-    <div class="unit">
-      <div class="digits" id="h"></div>
-      <div class="label">Hours</div>
+    <div class="married-timer-unit">
+      <div class="married-timer-digits" data-part="hours"></div>
+      <div class="married-timer-label">Hours</div>
     </div>
 
-    <div class="sep">•</div>
+    <div class="married-timer-sep">•</div>
 
-    <div class="unit">
-      <div class="digits" id="m"></div>
-      <div class="label">Minutes</div>
+    <div class="married-timer-unit">
+      <div class="married-timer-digits" data-part="minutes"></div>
+      <div class="married-timer-label">Minutes</div>
     </div>
 
-    <div class="sep">•</div>
+    <div class="married-timer-sep">•</div>
 
-    <div class="unit">
-      <div class="digits" id="s"></div>
-      <div class="label">Seconds</div>
+    <div class="married-timer-unit">
+      <div class="married-timer-digits" data-part="seconds"></div>
+      <div class="married-timer-label">Seconds</div>
     </div>
   </div>
-  `;
+</div>
 
-  const start = new Date("2025-04-26T18:00:00");
-  const lastVal = { d: "", h: "", m: "", s: "" };
-
-  function createCard(val) {
-    return `
-      <div class="card" data-val="${val}">
-        <div class="top">${val}</div>
-        <div class="bottom">${val}</div>
-      </div>`;
+<style>
+  .married-timer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
   }
 
-  function updateDigits(root, oldStr, newStr) {
+  .married-timer-heading {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  .married-timer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .married-timer-unit {
+    text-align: center;
+  }
+
+  .married-timer-label {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .married-timer-sep {
+    font-size: 40px;
+    color: #444;
+    margin-bottom: 60px;
+  }
+
+  .married-timer-digits {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .married-timer-card {
+    position: relative;
+    width: 80px;
+    height: 110px;
+    perspective: 300px;
+  }
+
+  .married-timer-top,
+  .married-timer-bottom {
+    background: #2f2f2f;
+    color: #c7c7c7;
+    font-size: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    overflow: hidden;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    line-height: 1;
+  }
+
+  .married-timer-top {
+    border-bottom: 1px solid #111;
+  }
+
+  .married-timer-bottom {
+    border-top: 1px solid #111;
+  }
+
+  .married-timer-flip {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 50%;
+    background: #2f2f2f;
+    color: #c7c7c7;
+    font-size: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom;
+    animation: marriedTimerFlip 0.7s ease-in-out forwards;
+  }
+
+  @keyframes marriedTimerFlip {
+    from { transform: rotateX(0deg); }
+    to   { transform: rotateX(-90deg); }
+  }
+
+  @media (max-width: 700px) {
+    .married-timer-card { width: 55px; height: 75px; }
+    .married-timer-top,
+    .married-timer-bottom,
+    .married-timer-flip { font-size: 55px; }
+    .married-timer-sep { font-size: 28px; margin-bottom: 40px; }
+    .married-timer-label { font-size: 16px; }
+  }
+</style>
+
+<script>
+(function() {
+  // Find the specific instance this script belongs to
+  var root = (function() {
+    // Look for the nearest .married-timer before this script tag
+    var scripts = document.getElementsByTagName('script');
+    var thisScript = scripts[scripts.length - 1];
+    var el = thisScript.previousElementSibling;
+    while (el && !el.classList.contains('married-timer')) {
+      el = el.previousElementSibling;
+    }
+    return el;
+  })();
+
+  if (!root || root.dataset.initialized === '1') return;
+  root.dataset.initialized = '1';
+
+  var startDate = new Date("2025-04-26T18:00:00");
+  var lastVals = { d: "", h: "", m: "", s: "" };
+
+  function createCard(val) {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'married-timer-card';
+    wrapper.innerHTML = `
+      <div class="married-timer-top">${val}</div>
+      <div class="married-timer-bottom">${val}</div>
+    `;
+    return wrapper;
+  }
+
+  function updateGroup(container, oldStr, newStr) {
     newStr = newStr.toString();
 
-    if (root.children.length !== newStr.length) {
-      root.innerHTML = "";
-      [...newStr].forEach(v => root.innerHTML += createCard(v));
+    if (container.children.length !== newStr.length) {
+      container.innerHTML = "";
+      for (var i = 0; i < newStr.length; i++) {
+        container.appendChild(createCard(newStr[i]));
+      }
     }
 
-    [...newStr].forEach((v, i) => {
-      const card = root.children[i];
-      const old = oldStr[i] ?? v;
-
-      if (old !== v) {
+    for (var i = 0; i < newStr.length; i++) {
+      var card = container.children[i];
+      var newVal = newStr[i];
+      var oldVal = oldStr[i] || newVal;
+      if (oldVal !== newVal) {
         card.innerHTML = `
-          <div class="top">${old}</div>
-          <div class="bottom">${v}</div>
+          <div class="married-timer-top">${oldVal}</div>
+          <div class="married-timer-bottom">${newVal}</div>
         `;
-        const flip = document.createElement("div");
-        flip.className = "flip";
-        flip.textContent = old;
+        var flip = document.createElement('div');
+        flip.className = 'married-timer-flip';
+        flip.textContent = oldVal;
         card.appendChild(flip);
-        setTimeout(() => flip.remove(), 800);
+        (function(f) {
+          setTimeout(function() { f.remove(); }, 800);
+        })(flip);
       }
-    });
+    }
   }
 
   function tick() {
-    const now = new Date();
-    let diff = now - start;
+    var now = new Date();
+    var diff = now - startDate;
     if (diff < 0) diff = 0;
 
-    const sec = Math.floor(diff / 1000);
-    const d = Math.floor(sec / 86400).toString();
-    const h = String(Math.floor((sec % 86400) / 3600)).padStart(2, "0");
-    const m = String(Math.floor((sec % 3600) / 60)).padStart(2, "0");
-    const s = String(sec % 60).padStart(2, "0");
+    var sec = Math.floor(diff / 1000);
+    var d = Math.floor(sec / 86400).toString(); // can be 2–3 digits
+    var h = String(Math.floor((sec % 86400) / 3600)).padStart(2, '0');
+    var m = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
+    var s = String(sec % 60).padStart(2, '0');
 
-    updateDigits(shadow.getElementById("d"), lastVal.d, d);
-    updateDigits(shadow.getElementById("h"), lastVal.h, h);
-    updateDigits(shadow.getElementById("m"), lastVal.m, m);
-    updateDigits(shadow.getElementById("s"), lastVal.s, s);
+    var daysEl    = root.querySelector('[data-part="days"]');
+    var hoursEl   = root.querySelector('[data-part="hours"]');
+    var minutesEl = root.querySelector('[data-part="minutes"]');
+    var secondsEl = root.querySelector('[data-part="seconds"]');
 
-    lastVal.d = d;
-    lastVal.h = h;
-    lastVal.m = m;
-    lastVal.s = s;
+    updateGroup(daysEl,    lastVals.d, d);
+    updateGroup(hoursEl,   lastVals.h, h);
+    updateGroup(minutesEl, lastVals.m, m);
+    updateGroup(secondsEl, lastVals.s, s);
+
+    lastVals = { d: d, h: h, m: m, s: s };
   }
 
   tick();
   setInterval(tick, 1000);
-
 })();
-}
 </script>
