@@ -1,0 +1,215 @@
+<div id="weddingTimer"></div>
+
+<script>
+// Prevent double-loading
+if (!window.__WEDDING_TIMER_LOADED__) {
+window.__WEDDING_TIMER_LOADED__ = true;
+
+// === SHADOW DOM TIMER COMPONENT (UNBREAKABLE) ===
+(function() {
+
+  const container = document.getElementById("weddingTimer");
+  if (!container) return;
+
+  const shadow = container.attachShadow({ mode: "open" });
+
+  shadow.innerHTML = `
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :host {
+      font-family: 'Share Tech Mono', monospace;
+      display: block;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .unit {
+      text-align: center;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .sep {
+      font-size: 40px;
+      color: #444;
+      margin-bottom: 60px;
+    }
+
+    .digits {
+      display: flex;
+      gap: 6px;
+    }
+
+    .card {
+      position: relative;
+      width: 80px;
+      height: 110px;
+      perspective: 300px;
+    }
+
+    .top, .bottom {
+      background: #2f2f2f;
+      color: #c7c7c7;
+      font-size: 85px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      overflow: hidden;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      line-height: 1;
+    }
+
+    .top {
+      border-bottom: 1px solid #111;
+    }
+
+    .bottom {
+      border-top: 1px solid #111;
+    }
+
+    .flip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #2f2f2f;
+      color: #c7c7c7;
+      font-size: 85px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-origin: bottom;
+      animation: flipAnim 0.7s forwards ease-in-out;
+    }
+
+    @keyframes flipAnim {
+      from { transform: rotateX(0); }
+      to { transform: rotateX(-90deg); }
+    }
+
+    @media (max-width: 700px) {
+      .card { width: 55px; height: 75px; }
+      .top, .bottom, .flip { font-size: 55px; }
+      .sep { font-size: 28px; }
+      .label { font-size: 16px; }
+    }
+  </style>
+
+  <h2>Days Since We Got Married</h2>
+
+  <div class="row">
+    <div class="unit">
+      <div class="digits" id="d"></div>
+      <div class="label">Days</div>
+    </div>
+
+    <div class="sep">•</div>
+
+    <div class="unit">
+      <div class="digits" id="h"></div>
+      <div class="label">Hours</div>
+    </div>
+
+    <div class="sep">•</div>
+
+    <div class="unit">
+      <div class="digits" id="m"></div>
+      <div class="label">Minutes</div>
+    </div>
+
+    <div class="sep">•</div>
+
+    <div class="unit">
+      <div class="digits" id="s"></div>
+      <div class="label">Seconds</div>
+    </div>
+  </div>
+  `;
+
+  const start = new Date("2025-04-26T18:00:00");
+  const lastVal = { d: "", h: "", m: "", s: "" };
+
+  function createCard(val) {
+    return `
+      <div class="card" data-val="${val}">
+        <div class="top">${val}</div>
+        <div class="bottom">${val}</div>
+      </div>`;
+  }
+
+  function updateDigits(root, oldStr, newStr) {
+    newStr = newStr.toString();
+
+    if (root.children.length !== newStr.length) {
+      root.innerHTML = "";
+      [...newStr].forEach(v => root.innerHTML += createCard(v));
+    }
+
+    [...newStr].forEach((v, i) => {
+      const card = root.children[i];
+      const old = oldStr[i] ?? v;
+
+      if (old !== v) {
+        card.innerHTML = `
+          <div class="top">${old}</div>
+          <div class="bottom">${v}</div>
+        `;
+        const flip = document.createElement("div");
+        flip.className = "flip";
+        flip.textContent = old;
+        card.appendChild(flip);
+        setTimeout(() => flip.remove(), 800);
+      }
+    });
+  }
+
+  function tick() {
+    const now = new Date();
+    let diff = now - start;
+    if (diff < 0) diff = 0;
+
+    const sec = Math.floor(diff / 1000);
+    const d = Math.floor(sec / 86400).toString();
+    const h = String(Math.floor((sec % 86400) / 3600)).padStart(2, "0");
+    const m = String(Math.floor((sec % 3600) / 60)).padStart(2, "0");
+    const s = String(sec % 60).padStart(2, "0");
+
+    updateDigits(shadow.getElementById("d"), lastVal.d, d);
+    updateDigits(shadow.getElementById("h"), lastVal.h, h);
+    updateDigits(shadow.getElementById("m"), lastVal.m, m);
+    updateDigits(shadow.getElementById("s"), lastVal.s, s);
+
+    lastVal.d = d;
+    lastVal.h = h;
+    lastVal.m = m;
+    lastVal.s = s;
+  }
+
+  tick();
+  setInterval(tick, 1000);
+
+})();
+}
+</script>
