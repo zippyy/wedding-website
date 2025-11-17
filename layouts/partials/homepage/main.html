@@ -3,8 +3,97 @@
 
     <br>
 
-    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-<a href="https://logwork.com/countdown-f41m" class="countdown-timer" data-style="flip3" data-timezone="America/Chicago" data-date="2025-04-26 18:00">Days Till We Get Married</a>
+<div class="elapsed-timer-container">
+  <div class="elapsed-timer-heading">Days Since We Got Married</div>
+  <div class="elapsed-timer-display">
+    <span class="elapsed-timer-segment">
+      <span id="et-days">0</span>
+      <span class="elapsed-timer-label">Days</span>
+    </span>
+    <span class="elapsed-timer-segment">
+      <span id="et-hours">00</span>
+      <span class="elapsed-timer-label">Hours</span>
+    </span>
+    <span class="elapsed-timer-segment">
+      <span id="et-minutes">00</span>
+      <span class="elapsed-timer-label">Minutes</span>
+    </span>
+    <span class="elapsed-timer-segment">
+      <span id="et-seconds">00</span>
+      <span class="elapsed-timer-label">Seconds</span>
+    </span>
+  </div>
+</div>
+
+<style>
+  .elapsed-timer-container {
+    font-family: inherit;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    color: #1a1a1a;
+  }
+  .elapsed-timer-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+  }
+  .elapsed-timer-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #111111;
+  }
+  .elapsed-timer-segment {
+    display: inline-block;
+    min-width: 70px;
+  }
+  .elapsed-timer-label {
+    display: block;
+    font-size: 0.65rem;
+    color: #888888;
+    margin-top: 4px;
+  }
+  @media (max-width: 480px) {
+    .elapsed-timer-display {
+      font-size: 2rem;
+    }
+    .elapsed-timer-segment {
+      min-width: 50px;
+    }
+  }
+</style>
+
+<script>
+  const startDate = new Date("2025-04-26T18:00:00");
+
+  function pad2(num) {
+    return num.toString().padStart(2, "0");
+  }
+
+  function updateElapsed() {
+    const now = new Date();
+    let diff = now - startDate;
+    if (diff < 0) diff = 0;
+
+    const totalSecs = Math.floor(diff / 1000);
+    const days = Math.floor(totalSecs / (3600 * 24));
+    const hours = Math.floor((totalSecs % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSecs % 3600) / 60);
+    const seconds = totalSecs % 60;
+
+    document.getElementById("et-days").textContent = days;
+    document.getElementById("et-hours").textContent = pad2(hours);
+    document.getElementById("et-minutes").textContent = pad2(minutes);
+    document.getElementById("et-seconds").textContent = pad2(seconds);
+  }
+
+  updateElapsed();
+  setInterval(updateElapsed, 1000);
+</script>
+
 
 <br>
 
