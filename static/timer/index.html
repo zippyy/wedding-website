@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wedding Timer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 20px 0;
+  font-family: 'Share Tech Mono', monospace;
+  background: transparent;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.unit { text-align: center; }
+.label { font-size: 18px; margin-top: 10px; color: #111; }
+.sep { font-size: 40px; color: #444; margin-bottom: 60px; }
+
+.digits { display: flex; gap: 6px; }
+
+.card {
+  width: 80px;
+  height: 110px;
+  position: relative;
+  perspective: 300px;
+}
+
+.top, .bottom {
+  background: #2f2f2f;
+  color: #c7c7c7;
+  font-size: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  overflow: hidden;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  line-height: 1;
+}
+
+.top { border-bottom: 1px solid #111; }
+.bottom { border-top: 1px solid #111; }
+
+.flip {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 50%;
+  background: #2f2f2f;
+  color: #c7c7c7;
+  font-size: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: bottom;
+  animation: flipAnim 0.7s forwards ease-in-out;
+}
+
+@keyframes flipAnim {
+  from { transform: rotateX(0); }
+  to   { transform: rotateX(-90deg); }
+}
+
+@media(max-width:600px){
+  .card { width:55px; height:75px; }
+  .top,.bottom,.flip { font-size:55px; }
+  .sep { font-size:28px; }
+  .label{font-size:16px;}
+}
+</style>
+
+</head>
+<body>
+
+<h2>Days Since We Got Married</h2>
+
+<div class="row">
+  <div class="unit">
+    <div class="digits" id="d"></div>
+    <div class="label">Days</div>
+  </div>
+  <div class="sep">•</div>
+  <div class="unit">
+    <div class="digits" id="h"></div>
+    <div class="label">Hours</div>
+  </div>
+  <div class="sep">•</div>
+  <div class="unit">
+    <div class="digits" id="m"></div>
+    <div class="label">Minutes</div>
+  </div>
+  <div class="sep">•</div>
+  <div class="unit">
+    <div class="digits" id="s"></div>
+    <div class="label">Seconds</div>
+  </div>
+</div>
+
+<script>
+const startDate = new Date("2025-04-26T18:00:00");
+let lastVals = {d:"",h:"",m:"",s:""};
+
+function createCard(v){
+  return `
+  <div class="card">
+    <div class="top">${v}</div>
+    <div class="bottom">${v}</div>
+  </div>`;
+}
+
+function update(root, oldStr, newStr){
+  newStr = newStr.toString();
+  if(root.children.length !== newStr.length){
+    root.innerHTML = "";
+    [...newStr].forEach(v=> root.innerHTML += createCard(v));
+  }
+
+  [...newStr].forEach((val,i)=>{
+    const card = root.children[i];
+    const oldVal = oldStr[i] ?? val;
+    if(oldVal !== val){
+      card.innerHTML = `
+        <div class="top">${oldVal}</div>
+        <div class="bottom">${val}</div>
+      `;
+      const f = document.createElement("div");
+      f.className = "flip";
+      f.textContent = oldVal;
+      card.appendChild(f);
+      setTimeout(()=>f.remove(),800);
+    }
+  });
+}
+
+function tick(){
+  const now = new Date();
+  let diff = now - startDate;
+  if(diff < 0) diff = 0;
+
+  const sec = Math.floor(diff / 1000);
+  const d = Math.floor(sec/86400).toString();
+  const h = String(Math.floor((sec%86400)/3600)).padStart(2,"0");
+  const m = String(Math.floor((sec%3600)/60)).padStart(2,"0");
+  const s = String(sec%60).padStart(2,"0");
+
+  update(document.getElementById("d"),lastVals.d,d);
+  update(document.getElementById("h"),lastVals.h,h);
+  update(document.getElementById("m"),lastVals.m,m);
+  update(document.getElementById("s"),lastVals.s,s);
+
+  lastVals={d,h,m,s};
+}
+
+tick();
+setInterval(tick,1000);
+</script>
+
+</body>
+</html>
