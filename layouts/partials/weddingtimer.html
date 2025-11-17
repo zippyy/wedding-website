@@ -1,4 +1,4 @@
-<div class="married-timer" data-married-timer>
+<div class="married-timer">
   <h2 class="married-timer-heading">Days Since We Got Married</h2>
 
   <div class="married-timer-row">
@@ -46,11 +46,11 @@
     margin-bottom: 30px;
   }
 
-  /* THIS is the important part: one single horizontal strip */
+  /* One single horizontal strip, no wrapping */
   .married-timer-row {
-    display: inline-flex;       /* keeps the whole row together */
-    flex-wrap: nowrap;          /* absolutely no wrapping */
-    white-space: nowrap;        /* prevent units from dropping down */
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -58,7 +58,7 @@
 
   .married-timer-unit,
   .married-timer-sep {
-    flex: 0 0 auto;             /* don't shrink or grow, just stay side-by-side */
+    flex: 0 0 auto;
   }
 
   .married-timer-unit {
@@ -85,80 +85,45 @@
   }
 
   .married-timer-card {
-    position: relative;
     width: 80px;
     height: 110px;
-    perspective: 300px;
-  }
-
-  .married-timer-top,
-  .married-timer-bottom {
     background: #2f2f2f;
     color: #c7c7c7;
-    font-size: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
-    overflow: hidden;
+    font-size: 85px;
+    line-height: 1;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    line-height: 1;
   }
 
-  .married-timer-top {
-    border-bottom: 1px solid #111;
+  /* subtle change animation when digit updates */
+  .married-timer-card.married-timer-change {
+    animation: marriedTimerPop 0.25s ease-out;
   }
 
-  .married-timer-bottom {
-    border-top: 1px solid #111;
-  }
-
-  .married-timer-flip {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 50%;
-    background: #2f2f2f;
-    color: #c7c7c7;
-    font-size: 85px;
-    line-height: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: bottom;
-    animation: marriedTimerFlip 0.7s ease-in-out forwards;
-  }
-
-  @keyframes marriedTimerFlip {
-    from { transform: rotateX(0deg); }
-    to   { transform: rotateX(-90deg); }
+  @keyframes marriedTimerPop {
+    0%   { transform: scale(0.9); opacity: 0.7; }
+    100% { transform: scale(1);   opacity: 1; }
   }
 
   @media (max-width: 700px) {
-    .married-timer-card { width: 55px; height: 75px; }
-    .married-timer-top,
-    .married-timer-bottom,
-    .married-timer-flip { font-size: 55px; }
+    .married-timer-card { width: 55px; height: 75px; font-size: 55px; }
     .married-timer-sep { font-size: 28px; margin-bottom: 40px; }
     .married-timer-label { font-size: 16px; }
   }
 </style>
 
-
 <script>
 (function() {
-  // Find the specific instance this script belongs to
-  var root = (function() {
-    // Look for the nearest .married-timer before this script tag
-    var scripts = document.getElementsByTagName('script');
-    var thisScript = scripts[scripts.length - 1];
-    var el = thisScript.previousElementSibling;
-    while (el && !el.classList.contains('married-timer')) {
-      el = el.previousElementSibling;
-    }
-    return el;
-  })();
-
+  // Find this instance’s root
+  var scripts = document.getElementsByTagName('script');
+  var thisScript = scripts[scripts.length - 1];
+  var root = thisScript.previousElementSibling;
+  while (root && !root.classList.contains('married-timer')) {
+    root = root.previousElementSibling;
+  }
   if (!root || root.dataset.initialized === '1') return;
   root.dataset.initialized = '1';
 
@@ -166,18 +131,16 @@
   var lastVals = { d: "", h: "", m: "", s: "" };
 
   function createCard(val) {
-    var wrapper = document.createElement('div');
-    wrapper.className = 'married-timer-card';
-    wrapper.innerHTML = `
-      <div class="married-timer-top">${val}</div>
-      <div class="married-timer-bottom">${val}</div>
-    `;
-    return wrapper;
+    var el = document.createElement('div');
+    el.className = 'married-timer-card';
+    el.textContent = val;
+    return el;
   }
 
   function updateGroup(container, oldStr, newStr) {
     newStr = newStr.toString();
 
+    // Adjust number of digit cards
     if (container.children.length !== newStr.length) {
       container.innerHTML = "";
       for (var i = 0; i < newStr.length; i++) {
@@ -189,18 +152,12 @@
       var card = container.children[i];
       var newVal = newStr[i];
       var oldVal = oldStr[i] || newVal;
-      if (oldVal !== newVal) {
-        card.innerHTML = `
-          <div class="married-timer-top">${oldVal}</div>
-          <div class="married-timer-bottom">${newVal}</div>
-        `;
-        var flip = document.createElement('div');
-        flip.className = 'married-timer-flip';
-        flip.textContent = oldVal;
-        card.appendChild(flip);
-        (function(f) {
-          setTimeout(function() { f.remove(); }, 800);
-        })(flip);
+      if (newVal !== oldVal) {
+        card.textContent = newVal;
+        card.classList.add('married-timer-change');
+        (function(c){
+          setTimeout(function(){ c.classList.remove('married-timer-change'); }, 250);
+        })(card);
       }
     }
   }
@@ -211,10 +168,10 @@
     if (diff < 0) diff = 0;
 
     var sec = Math.floor(diff / 1000);
-    var d = Math.floor(sec / 86400).toString(); // can be 2–3 digits
+    var d = Math.floor(sec / 86400).toString();
     var h = String(Math.floor((sec % 86400) / 3600)).padStart(2, '0');
     var m = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
-    var s = String(sec % 60).padStart(2, '0');
+    var s = String(sec % 60).toString().padStart(2, '0');
 
     var daysEl    = root.querySelector('[data-part="days"]');
     var hoursEl   = root.querySelector('[data-part="hours"]');
