@@ -35,6 +35,9 @@
     text-align: center;
     margin-top: 40px;
     font-family: 'Share Tech Mono', 'Courier New', monospace;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .married-timer-heading {
@@ -43,11 +46,19 @@
     margin-bottom: 30px;
   }
 
+  /* THIS is the important part: one single horizontal strip */
   .married-timer-row {
-    display: flex;
+    display: inline-flex;       /* keeps the whole row together */
+    flex-wrap: nowrap;          /* absolutely no wrapping */
+    white-space: nowrap;        /* prevent units from dropping down */
     justify-content: center;
     align-items: center;
     gap: 40px;
+  }
+
+  .married-timer-unit,
+  .married-timer-sep {
+    flex: 0 0 auto;             /* don't shrink or grow, just stay side-by-side */
   }
 
   .married-timer-unit {
@@ -110,6 +121,7 @@
     background: #2f2f2f;
     color: #c7c7c7;
     font-size: 85px;
+    line-height: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,6 +143,7 @@
     .married-timer-label { font-size: 16px; }
   }
 </style>
+
 
 <script>
 (function() {
