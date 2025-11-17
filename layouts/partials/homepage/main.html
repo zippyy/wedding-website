@@ -3,107 +3,117 @@
 
     <br>
 
-    <div id="married-timer" style="text-align:center; margin-top:40px;">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  <h2 style="font-size:32px; font-weight:400; margin-bottom:25px;">
+<div id="married-timer" style="text-align:center; margin-top:40px;">
+
+  <h2 style="font-size:32px; font-weight:400; margin-bottom:30px;">
     Days Since We Got Married
   </h2>
 
-  <div style="display:flex; justify-content:center; align-items:center; gap:20px;">
+  <div style="display:flex; justify-content:center; align-items:center; gap:40px;">
 
     <!-- DAYS -->
-    <div style="text-align:center;">
-      <div style="display:flex; gap:5px;">
+    <div class="unit">
+      <div class="digit-wrap">
         <span class="digit" id="d1"></span>
         <span class="digit" id="d2"></span>
       </div>
       <div class="label">Days</div>
     </div>
 
-    <div class="dot">•</div>
+    <div class="sep">•</div>
 
     <!-- HOURS -->
-    <div style="text-align:center;">
-      <div style="display:flex; gap:5px;">
+    <div class="unit">
+      <div class="digit-wrap">
         <span class="digit" id="h1"></span>
         <span class="digit" id="h2"></span>
       </div>
       <div class="label">Hours</div>
     </div>
 
-    <div class="dot">•</div>
+    <div class="sep">•</div>
 
     <!-- MINUTES -->
-    <div style="text-align:center;">
-      <div style="display:flex; gap:5px;">
+    <div class="unit">
+      <div class="digit-wrap">
         <span class="digit" id="m1"></span>
         <span class="digit" id="m2"></span>
       </div>
       <div class="label">Minutes</div>
     </div>
 
-    <div class="dot">•</div>
+    <div class="sep">•</div>
 
     <!-- SECONDS -->
-    <div style="text-align:center;">
-      <div style="display:flex; gap:5px;">
+    <div class="unit">
+      <div class="digit-wrap">
         <span class="digit" id="s1"></span>
         <span class="digit" id="s2"></span>
-      </div
+      </div>
       <div class="label">Seconds</div>
     </div>
 
   </div>
-
 </div>
 
 <style>
+  #married-timer .digit-wrap {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
   #married-timer .digit {
-    width: 60px;
-    height: 90px;
-    background: #2f2f2f;
-    display: inline-flex;
+    width: 80px;
+    height: 110px;
+    background: #2e2e2e;
+    border-radius: 2px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
-    font-family: 'Digital-7', 'Courier New', monospace;
-    font-weight: bold;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 85px;
     color: #c7c7c7;
-    border-radius: 3px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
   }
 
   #married-timer .label {
-    margin-top: 10px;
     font-size: 20px;
+    margin-top: 10px;
     color: #111;
   }
 
-  #married-timer .dot {
-    font-size: 40px;
+  #married-timer .sep {
+    font-size: 42px;
     color: #444;
-    margin: 0 10px;
+    margin-bottom: 60px;
   }
 
-  @media(max-width:600px) {
+  @media(max-width: 700px) {
     #married-timer .digit {
-      width: 45px;
-      height: 70px;
-      font-size: 50px;
+      width: 55px;
+      height: 75px;
+      font-size: 55px;
     }
     #married-timer .label {
       font-size: 16px;
     }
-    #married-timer .dot {
-      font-size: 30px;
+    #married-timer .sep {
+      font-size: 28px;
+      margin-bottom: 40px;
     }
   }
 </style>
 
 <script>
-  const weddingDate = new Date("2025-04-26T18:00:00"); // adjust time if needed
+  const weddingDate = new Date("2025-04-26T18:00:00"); 
 
-  function pad(n) {
-    return n.toString().padStart(2, "0");
+  function pad(num) {
+    return num.toString().padStart(2, "0");
   }
 
   function updateTimer() {
@@ -122,8 +132,8 @@
     const ms = pad(mins);
     const ss = pad(secs);
 
-    document.getElementById("d1").textContent = ds[ds.length - 2] || "0";
-    document.getElementById("d2").textContent = ds[ds.length - 1];
+    document.getElementById("d1").textContent = ds[0];
+    document.getElementById("d2").textContent = ds[1];
 
     document.getElementById("h1").textContent = hs[0];
     document.getElementById("h2").textContent = hs[1];
@@ -138,7 +148,6 @@
   updateTimer();
   setInterval(updateTimer, 1000);
 </script>
-
 
 <br>
 
